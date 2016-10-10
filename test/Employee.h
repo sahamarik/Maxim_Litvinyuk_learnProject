@@ -10,4 +10,9 @@
 
 @interface Employee : NSObject
 
+@property (nonatomic, readwrite) int salary;
+@property (nonatomic, readonly) NSString *fullName;
+
+- (id)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName salary:(int)salary;
+
 @end

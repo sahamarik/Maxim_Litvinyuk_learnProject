@@ -15,6 +15,8 @@
 		5021E3961DA4DB9100F6397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5021E3941DA4DB9100F6397F /* LaunchScreen.storyboard */; };
 		5021E3A11DA4DB9100F6397F /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5021E3A01DA4DB9100F6397F /* testTests.m */; };
 		5021E3AC1DA4DB9100F6397F /* testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5021E3AB1DA4DB9100F6397F /* testUITests.m */; };
+		5021E3C01DA4E51500F6397F /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 5021E3BF1DA4E51500F6397F /* Employee.m */; };
+		50C783CC1DA4F6E30068A521 /* Organisation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C783CB1DA4F6E30068A521 /* Organisation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		5021E3A71DA4DB9100F6397F /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5021E3AB1DA4DB9100F6397F /* testUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testUITests.m; sourceTree = "<group>"; };
 		5021E3AD1DA4DB9100F6397F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5021E3BE1DA4E51500F6397F /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		5021E3BF1DA4E51500F6397F /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		50C783CA1DA4F6E30068A521 /* Organisation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organisation.h; sourceTree = "<group>"; };
+		50C783CB1DA4F6E30068A521 /* Organisation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organisation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				5021E3941DA4DB9100F6397F /* LaunchScreen.storyboard */,
 				5021E3971DA4DB9100F6397F /* Info.plist */,
 				5021E3861DA4DB9100F6397F /* Supporting Files */,
+				5021E3BE1DA4E51500F6397F /* Employee.h */,
+				5021E3BF1DA4E51500F6397F /* Employee.m */,
+				50C783CA1DA4F6E30068A521 /* Organisation.h */,
+				50C783CB1DA4F6E30068A521 /* Organisation.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -276,6 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5021E3C01DA4E51500F6397F /* Employee.m in Sources */,
+				50C783CC1DA4F6E30068A521 /* Organisation.m in Sources */,
 				5021E38E1DA4DB9100F6397F /* ViewController.m in Sources */,
 				5021E38B1DA4DB9100F6397F /* AppDelegate.m in Sources */,
 				5021E3881DA4DB9100F6397F /* main.m in Sources */,
@@ -516,6 +528,7 @@
 				5021E3B21DA4DB9100F6397F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5021E3B31DA4DB9100F6397F /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +537,7 @@
 				5021E3B51DA4DB9100F6397F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5021E3B61DA4DB9100F6397F /* Build configuration list for PBXNativeTarget "testUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +546,7 @@
 				5021E3B81DA4DB9100F6397F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
