@@ -71,7 +71,7 @@
 }
 
 //Method iterate array employees and return element with lowest property - salary
-- (id)employeeWithLowestSalary              //нужно вернуть 1 объект класса Employee
+- (Employee *)employeeWithLowestSalary              //нужно вернуть 1 объект класса Employee
 {
     int lowestSalary = INT_MAX;
     Employee *lowestSalariedEmployee;
@@ -94,7 +94,7 @@
     
     //цикл в котором будут прощитываться елементы массива employees и добавляться в массив выше
     
-    for (Employee *employee in _employees)
+    for (Employee *employee in self.employees)
     {
         if(employee.salary == salaryOfEmployee )
         {
@@ -107,8 +107,20 @@
 }
 
 
+- (void)removeEmployee:(Employee *)employee
+    {
+     
+        NSMutableArray *mutableArrayDel = [_employees mutableCopy];
+        [mutableArrayDel removeObject:employee];
+        self.employees = [mutableArrayDel copy];
+        
+       // [self.employees removeObjectInArray: employee];
+        
+    }
+
 - (NSString *)description
 {
+    
     
     return [NSString stringWithFormat:@"%@", self.name];
     

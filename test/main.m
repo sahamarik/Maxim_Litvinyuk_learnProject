@@ -35,7 +35,8 @@ int main(int argc, char * argv[]) {
     NSLog(@"Employees with lowest salary - %@\n", [newOrg employeeWithLowestSalary]);
     
     NSLog(@"Employee with selected salary - %@\n", [newOrg employeesWithSalary:1000]);
-    
+    [newOrg employeeWithLowestSalary];
+    [newOrg removeEmployee: [newOrg employeeWithLowestSalary]];
     
     
     
