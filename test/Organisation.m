@@ -106,6 +106,19 @@
     
 }
 
+- (void)removeEmployee:(Employee *)employee
+{
+    
+    NSMutableArray *deletingArray = [self.employees mutableCopy];
+    for (Employee *employee in self.employees)
+    {
+ 
+        [deletingArray removeObject:employee];
+    
+    }
+    self.employees = [deletingArray copy];
+}
+
 
 - (NSString *)description
 {

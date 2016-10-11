@@ -20,5 +20,6 @@
 - (int)calculateAverageSalary;
 - (id)employeeWithLowestSalary;
 - (NSMutableArray *)employeesWithSalary:(int)salaryOfEmployee;
+- (void)removeEmployee:(Employee *)employee;
 
 @end
