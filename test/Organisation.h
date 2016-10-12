@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Employee.h"
 
 
 @interface Organisation : NSObject
@@ -20,6 +20,6 @@
 - (int)calculateAverageSalary;
 - (Employee *)employeeWithLowestSalary;
 - (NSMutableArray *)employeesWithSalary:(int)salaryOfEmployee;
-- (void)removeEmployee:(NSString *)employee;
+- (void)removeEmployee:(Employee *)employee;
 
 @end
