@@ -18,7 +18,8 @@
 - (id)initWithName:(NSString *)organisationName;
 - (void)addEmployeeWithName:(NSString *)employeesName;// andLastName:(NSString *) employeesLastName;
 - (int)calculateAverageSalary;
-- (id)employeeWithLowestSalary;
+- (Employee *)employeeWithLowestSalary;
 - (NSMutableArray *)employeesWithSalary:(int)salaryOfEmployee;
+- (void)removeEmployee:(Employee *)employee;
 
 @end
