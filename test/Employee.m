@@ -10,12 +10,8 @@
 
 @interface Employee()
 
-
-@property(strong, nonatomic) NSString *firstName;
-@property(strong, nonatomic) NSString *lastName;
-
-
-
+@property (strong, nonatomic) NSString *firstName;
+@property (strong, nonatomic) NSString *lastName;
 
 @end
 
@@ -23,30 +19,25 @@
 
 - (id)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName salary:(int)salary
 {
-    if (self = [super init])
+    self = [super init];
+    if (self)
     {
         self.firstName = firstName;
         self.lastName = lastName;
         self.salary = salary;
-        return self;
     }
     
-    return nil;
+    return self;
 }
 
 - (NSString *)fullName
 {
-  //  return [NSString stringWithFormat:self.firstName, @" ", self.lastName];
     return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
 }
 
 - (NSString *)description
 {
-    
     return [NSString stringWithFormat:@"%@ %@ %d", self.firstName, self.lastName, self.salary];
-    
 }
-
-
 
 @end

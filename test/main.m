@@ -37,22 +37,12 @@ int main(int argc, char * argv[]) {
     NSLog(@"Employee with selected salary - %@\n", [newOrg employeesWithSalary:1000]);
    
     [newOrg employeeWithLowestSalary];
-    //Employee *emp = [Employee new];
+    
     Employee *emp1 = [[Employee alloc] init];
     
     emp1 = [newOrg employeeWithLowestSalary];
     
-    //emp1 = newOrg.employeeWithLowestSalary;
-    
     [newOrg removeEmployee: emp1];
-    
-    
-    
-    
-    
-     
-    
-   
     
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
