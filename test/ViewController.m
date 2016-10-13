@@ -10,6 +10,9 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *display;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 @end
 
 @implementation ViewController
@@ -25,5 +28,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (IBAction)myButton:(UIButton *)sender
+{
+    self.display.text = self.textField.text;
+}
 @end
