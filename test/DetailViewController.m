@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "Employee.h"
+#import "Organisation.h"
 
 @interface DetailViewController ()
 

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Employee.h"
+@class Employee;
+@class Organisation;
 
 @interface DetailViewController : UIViewController
 

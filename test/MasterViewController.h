@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Organisation.h"
-#import "Employee.h"
+
+@class Organisation;
+@class Employee;
 
 @interface MasterViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 

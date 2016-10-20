@@ -42,13 +42,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.org.employees count];
+    return self.org.employees.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-    Employee *employee = self.org.employees[indexPath.row];
+    Employee *employee = self.org.employees [indexPath.row];
     cell.textLabel.text = employee.fullName;
   
     return cell;
@@ -56,7 +56,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedEmployee = [self.org.employees objectAtIndex:indexPath.row];
+    self.selectedEmployee = self.org.employees [indexPath.row];
     [self performSegueWithIdentifier:@"mySegue" sender:self];
 }
 
