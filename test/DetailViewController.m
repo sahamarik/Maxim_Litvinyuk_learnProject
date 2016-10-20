@@ -14,14 +14,23 @@
 
 @implementation DetailViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSArray *empName = [self.employee.fullName componentsSeparatedByString:@" "];
+    NSString *firstNameOfEmployee = empName[0];
+    int sal = _employee.salary;
+    
+    
+    self.title = self.employee.fullName;
+    self.detailLabel.text = [NSString stringWithFormat:@"%@`s salary is - %d", firstNameOfEmployee, sal];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   
 }
 
 /*

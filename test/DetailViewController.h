@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Employee.h"
+#import "Organisation.h"
+#import "MasterViewController.h"
+
 
 @interface DetailViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (strong, nonatomic) Employee *employee;
+
 
 @end
