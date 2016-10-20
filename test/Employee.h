@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) int salary;
 @property (nonatomic, readonly) NSString *fullName;
+@property (strong, nonatomic) NSString *firstName;
 
 - (id)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName salary:(int)salary;
 

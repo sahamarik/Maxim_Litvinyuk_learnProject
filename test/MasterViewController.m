@@ -13,87 +13,59 @@
 
 @interface MasterViewController ()
 
-@property (strong, nonatomic) NSMutableArray *employeesArray;
+//@property (strong, nonatomic) NSMutableArray *employeesArray;
 
-@property (strong, nonatomic) Employee *savedEmployee;
+@property (weak, nonatomic) Employee *selectedEmployee;
+@property (strong, nonatomic) Organisation *org;
 
 @end
 
 @implementation MasterViewController
 
-
-
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-//    self.myTableView.delegate = self;
-//    self.myTableView.dataSource = self;
-  
-    Organisation *newOrganisation = [[Organisation alloc] initWithName:@"Corp"];
-    [newOrganisation addEmployeeWithName:@"Rork Smith"];
-    [newOrganisation addEmployeeWithName:@"Rork1 Smith1"];
-    [newOrganisation addEmployeeWithName:@"Rork2 Smith2"];
-    [newOrganisation addEmployeeWithName:@"Rork3 Smith3"];
-    // Do any additional setup after loading the view.
+    
+    self.org = [[Organisation alloc] initWithName:@"Corporation"];
+    [self.org addEmployeeWithName:@"Rork Smith"];
+    [self.org addEmployeeWithName:@"Rork2 Smith2"];
+    [self.org addEmployeeWithName:@"Rork3 Smith3"];
+    [self.org addEmployeeWithName:@"Rork4 Smith4"];
+    
     self.title = @"employees";
-  
-   self.employeesArray = [[NSMutableArray alloc] init];
-   self.employeesArray = [newOrganisation.employees copy];
-  
-
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.employeesArray.count;
+    return [self.org.employees count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-    Employee *employee = self.employeesArray[indexPath.row];
+    Employee *employee = self.org.employees[indexPath.row];
     cell.textLabel.text = employee.fullName;
   
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.savedEmployee = [self.employeesArray objectAtIndex:indexPath.row];
+    self.selectedEmployee = [self.org.employees objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"mySegue" sender:self];
-
-    
-    //    DetailViewController *destViewController = [DetailViewController new];  ----сохранить работника
-    //    [self.navigationController pushViewController:destViewController animated:YES];
 }
 
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"mySegue"])
     {
-        //NSIndexPath *indexPath = [self.myTableView indexPathForCell:(UITableViewCell *) self.savedEmployee];
         DetailViewController *detailView = segue.destinationViewController;
-        detailView.employee = self.savedEmployee; // использовать выбранного работника
-    
+        detailView.employee = self.selectedEmployee;   
     }
 }
-
-
-
-#pragma mark - Navigation
-
-
 @end

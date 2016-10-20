@@ -7,11 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "Organisation.h"
-#import "Employee.h"
-#import "MasterViewController.h"
-
-
 
 @interface AppDelegate ()
 

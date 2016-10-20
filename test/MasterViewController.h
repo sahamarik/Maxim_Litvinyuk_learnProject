@@ -12,8 +12,7 @@
 
 @interface MasterViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
-//@property(strong, nonatomic) NSMutableArray *employeesArray;
 @property (weak, nonatomic) IBOutlet UILabel *employeeLabel;
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
-@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 @end
