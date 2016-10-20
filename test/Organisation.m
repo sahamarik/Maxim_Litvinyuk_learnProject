@@ -11,7 +11,7 @@
 
 @interface Organisation()
 
-@property(strong, nonatomic) NSArray<Employee *> *employees;
+//@property(strong, nonatomic) NSArray<Employee *> *employees;
 
 @end
 

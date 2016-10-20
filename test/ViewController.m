@@ -7,11 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Employee.h"
+#import "Organisation.h"
+
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *display;
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 
 @end
 
@@ -20,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"Organisation";
+    
+    
 }
 
 
@@ -28,8 +33,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)myButton:(UIButton *)sender
-{
-    self.display.text = self.textField.text;
-}
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+//{
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyBasicCell"];
+//    Organisation *newOrg = [self.employees objectAtIndex:indexPath.row];
+//    cell.textLabel.text = newOrg.name;
+//    return cell;
+//}
+
 @end
