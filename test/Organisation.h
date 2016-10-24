@@ -13,6 +13,7 @@
 @interface Organisation : NSObject
 
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSArray<Employee *> *employees;
 
 - (id)initWithName:(NSString *)organisationName;
 - (void)addEmployeeWithName:(NSString *)employeesName;
@@ -22,3 +23,4 @@
 - (void)removeEmployee:(Employee *)employee;
 
 @end
+
