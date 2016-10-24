@@ -13,8 +13,6 @@
 
 @interface MasterViewController ()
 
-//@property (strong, nonatomic) NSMutableArray *employeesArray;
-
 @property (weak, nonatomic) Employee *selectedEmployee;
 @property (strong, nonatomic) Organisation *org;
 
@@ -57,6 +55,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.selectedEmployee = self.org.employees [indexPath.row];
+    [self.myTableView reloadData];
     [self performSegueWithIdentifier:@"mySegue" sender:self];
 }
 
@@ -67,5 +66,20 @@
         DetailViewController *detailView = segue.destinationViewController;
         detailView.employee = self.selectedEmployee;   
     }
+    
+    if([segue.identifier isEqualToString:@"createEmployeeSegue"])
+    {
+        CreateEmployeeViewController *createView = segue.destinationViewController;
+        createView.delegate = self;     // указание на то,что текущий объект будет делегатором для объекта createView
+    }
 }
+
+- (void) sendEmployee:(Employee *)createEmployee
+{
+    NSMutableArray *mutatedEmployees = [self.org.employees mutableCopy];
+    [mutatedEmployees addObject: createEmployee];
+    self.org.employees = [mutatedEmployees copy];
+    [self.myTableView reloadData];
+}
+
 @end
