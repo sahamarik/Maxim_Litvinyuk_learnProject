@@ -18,13 +18,6 @@
 
 int main(int argc, char * argv[]) {
     
-
-   
-    
-    
-    
-    
-    
 //    Organisation *newOrg = [[Organisation alloc]initWithName:@"Evil-corp"];
 //    [newOrg addEmployeeWithName:@"Bob Lob"];
 //    [newOrg addEmployeeWithName:@"Max Pars"];

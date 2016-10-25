@@ -88,7 +88,6 @@
     return arrayWithEmployeesSalary;
 }
 
-
 - (void)removeEmployee:(Employee *)employee
 {
     NSMutableArray *mutableArrayDel = [_employees mutableCopy];
