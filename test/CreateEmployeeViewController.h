@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Employee.h"
+@class Employee;
 
 
-@protocol passingEmployee <NSObject>
+@protocol PassingEmployee <NSObject>
 
 - (void) sendEmployee:(Employee *)createEmployee;
 
@@ -24,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
 @property (weak, nonatomic) IBOutlet UILabel *salaryLabel;
 @property (weak, nonatomic) IBOutlet UITextField *salaryTextField;
-@property (weak, nonatomic) id<passingEmployee> delegate;
+@property (weak, nonatomic) id<PassingEmployee> delegate;
 
 - (IBAction)saveEditing:(UIButton *)sender;
 

@@ -11,7 +11,7 @@
 @class Organisation;
 @class Employee;
 
-@interface MasterViewController : UITableViewController <passingEmployee>
+@interface MasterViewController : UITableViewController <PassingEmployee>
 
 @property (weak, nonatomic) IBOutlet UILabel *employeeLabel;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
