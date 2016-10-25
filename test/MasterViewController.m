@@ -13,8 +13,6 @@
 
 @interface MasterViewController ()
 
-//@property (strong, nonatomic) NSMutableArray *employeesArray;
-
 @property (weak, nonatomic) Employee *selectedEmployee;
 @property (strong, nonatomic) Organisation *org;
 
@@ -48,7 +46,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-    Employee *employee = self.org.employees [indexPath.row];
+    Employee *employee = self.org.employees[indexPath.row];
     cell.textLabel.text = employee.fullName;
   
     return cell;
@@ -57,15 +55,30 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.selectedEmployee = self.org.employees [indexPath.row];
-    [self performSegueWithIdentifier:@"mySegue" sender:self];
+    [self performSegueWithIdentifier:@"segueToDetailView" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"mySegue"])
+    if ([segue.identifier isEqualToString:@"segueToDetailView"])
     {
         DetailViewController *detailView = segue.destinationViewController;
         detailView.employee = self.selectedEmployee;   
     }
+    
+    else if ([segue.identifier isEqualToString:@"createEmployeeSegue"])
+    {
+        CreateEmployeeViewController *createView = segue.destinationViewController;
+        createView.delegate = self;     // указание на то,что текущий объект будет делегатором для объекта createView
+    }
 }
+
+- (void) sendEmployee:(Employee *)createEmployee
+{
+    NSMutableArray *mutatedEmployees = [self.org.employees mutableCopy];
+    [mutatedEmployees addObject:createEmployee];
+    self.org.employees = [mutatedEmployees copy];
+    [self.myTableView reloadData];
+}
+
 @end

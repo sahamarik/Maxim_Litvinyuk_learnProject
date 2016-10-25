@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CreateEmployeeViewController.h"
 @class Organisation;
 @class Employee;
 
-@interface MasterViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MasterViewController : UITableViewController <PassingEmployee>
 
 @property (weak, nonatomic) IBOutlet UILabel *employeeLabel;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
