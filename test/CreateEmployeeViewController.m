@@ -9,13 +9,7 @@
 #import "CreateEmployeeViewController.h"
 #import "MasterViewController.h"
 #import "Employee.h"
-
-@interface CreateEmployeeViewController ()
-
-
-@property (strong, nonatomic) Employee *createEmployee;
-
-@end
+#import "DatabaseController.h"
 
 @implementation CreateEmployeeViewController
 
@@ -26,9 +20,29 @@
 
 - (IBAction)saveEditing:(UIButton *)sender
 {
-    self.createEmployee = [[Employee alloc] initWithFirstName:self.firstNameTextField.text lastName:self.lastNameTextField.text salary:[self.salaryTextField.text intValue]];
-    
-    [self.delegate sendEmployee:self.createEmployee];
+  
+    if ((self.firstNameTextField.text.length > 0) && (self.lastNameTextField.text.length > 0) && ((self.salaryTextField.text.length > 0) && (([self.salaryTextField.text intValue] / 1))))
+    {
+        self.createEmployee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
+        
+        self.createEmployee.firstName = self.firstNameTextField.text;
+        self.createEmployee.lastName = self.lastNameTextField.text;
+        self.createEmployee.salary = [self.salaryTextField.text intValue];
+        
+        [DatabaseController saveContext];
+        
+        [self.delegate sendEmployee:self.createEmployee];
+    }
+    else
+    {
+        UIAlertView *alert = [ [UIAlertView alloc]
+                              initWithTitle:@"Error"
+                              message:@"Incorrect data"
+                              delegate:nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
     [self.navigationController popViewControllerAnimated:true];
 }
 
