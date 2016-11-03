@@ -11,8 +11,6 @@
 
 @interface Employee (Logic)
 
-
-
 - (id)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName salary:(int)salary;
 
 @end

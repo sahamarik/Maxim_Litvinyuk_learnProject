@@ -11,18 +11,6 @@
 
 @implementation Organisation (Logic)
 
-//This Method gives organisation name
-//- (instancetype)initWithName:(NSString *)organisationName
-//{
-//    self = [super init];
-//    if (self)
-//    {
-//            self.name = organisationName;
-//    }
-//    
-//    return self;
-//}
-
 // Method create new object Employee`s class and put in array Organisation`s array
 - (void)addEmployeeWithName:(NSString *)employeesName //andLastName:(NSString *)employeesLastName
 {
@@ -47,7 +35,7 @@
 }
 
 // Method iterate array employees and return element with lowest property - salary
-- (Employee *)employeeWithLowestSalary              //нужно вернуть 1 объект класса Employee
+- (Employee *)employeeWithLowestSalary
 {
     int lowestSalary = INT_MAX;
     Employee *lowestSalariedEmployee;
@@ -67,8 +55,6 @@
 {
     NSMutableArray *arrayWithEmployeesSalary = [NSMutableArray array];
     
-    //цикл в котором будут прощитываться елементы массива employees и добавляться в массив выше
-    
     for (Employee *employee in self.employee)
     {
         if (employee.salary == salaryOfEmployee)
@@ -80,13 +66,6 @@
     return arrayWithEmployeesSalary;
 }
 
-//- (void)removeEmployee:(Employee *)employee
-//{
-//    NSMutableArray *mutableArrayDel = [_employees mutableCopy];
-//    [mutableArrayDel removeObject:employee];
-//    self.employees = [mutableArrayDel copy];
-//}
-//
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%@", self.name];

@@ -13,7 +13,6 @@
 #import "Organisation+CoreDataProperties.h"
 #import "DatabaseController.h"
 
-
 @interface MasterViewController ()
 
 @property (weak, nonatomic) Employee *selectedEmployee;
@@ -103,7 +102,7 @@
     }
 }
 
-- (void) sendEmployee:(Employee *)createEmployee
+- (void)sendEmployee:(Employee *)createEmployee
 {
     [self.org addEmployeeObject:createEmployee];
     [DatabaseController saveContext];

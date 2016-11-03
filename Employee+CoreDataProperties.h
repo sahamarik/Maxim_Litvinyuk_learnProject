@@ -21,8 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int32_t salary;
 @property (nullable, nonatomic, retain) Organisation *organisation;
 
-
-
 @end
 
 NS_ASSUME_NONNULL_END

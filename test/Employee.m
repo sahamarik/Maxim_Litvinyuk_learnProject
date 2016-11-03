@@ -20,7 +20,6 @@
         self.lastName = lastName;
         self.salary = salary;
     }
-    
     return self;
 }
 

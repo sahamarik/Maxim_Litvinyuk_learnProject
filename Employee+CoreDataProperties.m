@@ -20,6 +20,4 @@
 @dynamic salary;
 @dynamic organisation;
 
-
-
 @end

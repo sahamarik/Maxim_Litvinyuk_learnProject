@@ -11,13 +11,6 @@
 #import "Employee.h"
 #import "DatabaseController.h"
 
-@interface CreateEmployeeViewController ()
-
-
-
-
-@end
-
 @implementation CreateEmployeeViewController
 
 - (void)viewDidLoad
