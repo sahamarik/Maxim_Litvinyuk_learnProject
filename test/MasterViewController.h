@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CreateEmployeeViewController.h"
+#import "Organisation.h"
+
 @class Organisation;
 @class Employee;
 

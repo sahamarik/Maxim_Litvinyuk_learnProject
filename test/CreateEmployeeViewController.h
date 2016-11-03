@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *salaryTextField;
 @property (weak, nonatomic) id<PassingEmployee> delegate;
 
+@property (strong, nonatomic) Employee *createEmployee;
 - (IBAction)saveEditing:(UIButton *)sender;
 
 @end

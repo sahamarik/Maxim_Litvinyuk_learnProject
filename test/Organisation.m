@@ -9,29 +9,21 @@
 #import "Organisation.h"
 #import "Employee.h"
 
-@interface Organisation()
-
-//@property(strong, nonatomic) NSArray<Employee *> *employees;
-
-@end
-
-@implementation Organisation
+@implementation Organisation (Logic)
 
 //This Method gives organisation name
-- (instancetype)initWithName:(NSString *)organisationName
-{
-    self = [super init];
-    if (self)
-    {
-        self.employees = [NSArray new]; // написать свой инициализатор
-        self.name = organisationName;
-    }
-    
-    return self;
-}
+//- (instancetype)initWithName:(NSString *)organisationName
+//{
+//    self = [super init];
+//    if (self)
+//    {
+//            self.name = organisationName;
+//    }
+//    
+//    return self;
+//}
 
 // Method create new object Employee`s class and put in array Organisation`s array
-// this method uses Employee`s class constructor
 - (void)addEmployeeWithName:(NSString *)employeesName //andLastName:(NSString *)employeesLastName
 {
     int employeesSalary = ((arc4random_uniform(490) + 10) * 10);
@@ -40,16 +32,16 @@
 
     Employee *myEmp =[[Employee alloc] initWithFirstName:empName[0] lastName:empName[1] salary:employeesSalary];
 
-    NSMutableArray *mutableArray = [_employees mutableCopy];
+    NSMutableArray *mutableArray = [self.employee mutableCopy];
     [mutableArray addObject:myEmp];
     
-    self.employees = [mutableArray copy];
+    self.employee = [mutableArray copy];
 }
 
 // Method calculate average property "salary" of all emlployees array
 - (int)calculateAverageSalary
 {
-    NSNumber *average = [_employees valueForKeyPath:@"@avg.salary"];
+    NSNumber *average = [self.employee valueForKeyPath:@"@avg.salary"];
    
     return average.intValue;
 }
@@ -59,7 +51,7 @@
 {
     int lowestSalary = INT_MAX;
     Employee *lowestSalariedEmployee;
-    for (Employee *employee in _employees)
+    for (Employee *employee in self.employee)
     {
         if (employee.salary < lowestSalary )
         {
@@ -77,7 +69,7 @@
     
     //цикл в котором будут прощитываться елементы массива employees и добавляться в массив выше
     
-    for (Employee *employee in self.employees)
+    for (Employee *employee in self.employee)
     {
         if (employee.salary == salaryOfEmployee)
         {
@@ -88,13 +80,13 @@
     return arrayWithEmployeesSalary;
 }
 
-- (void)removeEmployee:(Employee *)employee
-{
-    NSMutableArray *mutableArrayDel = [_employees mutableCopy];
-    [mutableArrayDel removeObject:employee];
-    self.employees = [mutableArrayDel copy];
-}
-
+//- (void)removeEmployee:(Employee *)employee
+//{
+//    NSMutableArray *mutableArrayDel = [_employees mutableCopy];
+//    [mutableArrayDel removeObject:employee];
+//    self.employees = [mutableArrayDel copy];
+//}
+//
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%@", self.name];
