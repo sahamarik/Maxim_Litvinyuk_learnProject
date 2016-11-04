@@ -71,7 +71,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Add birth date"/>
                                 <connections>
-                                    <action selector="addBirthDate:" destination="am9-fR-6Io" eventType="touchUpInside" id="oF4-Rb-3uN"/>
+                                    <action selector="addBirthday:" destination="am9-fR-6Io" eventType="touchUpInside" id="0Qj-AA-hVo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,7 +199,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="BirthDayLabel" destination="xAe-lQ-yjj" id="mhH-1o-e4j"/>
+                        <outlet property="BirthdayLabel" destination="xAe-lQ-yjj" id="0hE-Pm-auB"/>
                         <outlet property="detailLabel" destination="a7W-Dd-2aY" id="Wq4-o3-e9a"/>
                     </connections>
                 </viewController>

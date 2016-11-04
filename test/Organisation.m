@@ -26,8 +26,8 @@
 
     NSMutableArray *mutableArray = [self.employees mutableCopy];
     [mutableArray addObject:myEmp];
-    
     self.employees = [mutableArray copy];
+    
 }
 
 // Method calculate average property "salary" of all emlployees array
@@ -73,6 +73,12 @@
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%@", self.name];
+}
+
+- (NSArray *)sortedEmployees
+{
+    NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:true];
+    return [self.employees sortedArrayUsingDescriptors:@[firstNameDescriptor]];
 }
 
 @end

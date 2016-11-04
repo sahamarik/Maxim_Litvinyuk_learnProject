@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "HSDatePickerViewController.h"
+
 @class Employee;
 
 @protocol PassingEmployee <NSObject>
 
-- (void) sendEmployee:(Employee *)createEmployee;
+- (void) sendEmployee:(Employee *)newEmployee;
 
 @end
 
@@ -27,6 +28,6 @@
 @property (weak, nonatomic) id<PassingEmployee> delegate;
 
 - (IBAction)saveEditing:(UIButton *)sender;
-- (IBAction)addBirthDate:(UIButton *)sender;
+- (IBAction)addBirthday:(UIButton *)sender;
 
 @end

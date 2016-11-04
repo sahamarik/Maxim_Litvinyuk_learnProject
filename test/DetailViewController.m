@@ -10,7 +10,6 @@
 #import "Employee.h"
 #import "Organisation.h"
 
-
 @interface DetailViewController ()
 
 @end
@@ -20,12 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *firstNameOfEmployee = self.employee.firstName;
-    int sal = _employee.salary;
-    NSDate *birthDayOfEmployee = self.employee.dateOfBirth;
+    
     self.title = self.employee.fullName;
-    self.detailLabel.text = [NSString stringWithFormat:@"%@`s salary is - %d", firstNameOfEmployee, sal];
-    self.BirthDayLabel.text = [NSString stringWithFormat:@"Birth day - %@",birthDayOfEmployee];
+    self.detailLabel.text = [NSString stringWithFormat:@"%@`s salary is - %d", self.employee.firstName, self.employee.salary];
+    self.BirthdayLabel.text = [NSString stringWithFormat:@"Birthday - %@", self.employee.dateOfBirth];
 }
 
 @end

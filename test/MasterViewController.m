@@ -16,9 +16,7 @@
 @interface MasterViewController ()
 
 @property (weak, nonatomic) Employee *selectedEmployee;
-@property (weak, nonatomic) Employee *deletedEmployee;
 @property (strong, nonatomic) Organisation *org;
-@property (readonly, nonatomic) NSArray *sortedEmployees;
 
 @end
 
@@ -28,12 +26,10 @@
 {
     [super viewDidLoad];
     
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Organisation"];
-
-    NSArray *fetchResult = [[DatabaseController sharedInstance].context executeFetchRequest:fetchRequest error:nil];
+    NSArray *fetchResult = [DatabaseController requestResultsForPredicate:nil sortDescriptors:nil entity:@"Organisation" fromContext:[DatabaseController sharedInstance].context];
     if (fetchResult.count > 0)
     {   
-        self.org = [DatabaseController requestResultsForPredicate:(NSPredicate *)nil sortDescriptors:(NSArray *)nil entity:(NSString *)@"Organisation"].firstObject;
+        self.org = fetchResult.firstObject;
     }
     else
     {
@@ -56,11 +52,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-   // NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:true];
-   // self.sortedArrayInCell = [self.org.employees sortedArrayUsingDescriptors:@[firstNameDescriptor]];
-    
-    Employee *employeeToCell = self.sortedEmployees[indexPath.row];
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [employeeToCell valueForKey:@"fullName"]]];
+    Employee *employee = self.org.sortedEmployees[indexPath.row];
+    [cell.textLabel setText:employee.fullName];
   
     return cell;
 }
@@ -72,8 +65,8 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.deletedEmployee = self.sortedEmployees[indexPath.row];
-    [self.org removeEmployeesObject:self.deletedEmployee];
+    self.selectedEmployee = self.org.sortedEmployees[indexPath.row];
+    [self.org removeEmployeesObject:self.selectedEmployee];
     [DatabaseController saveContext];
     
     [self.myTableView reloadData];
@@ -82,7 +75,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedEmployee = self.sortedEmployees[indexPath.row];
+    self.selectedEmployee = self.org.sortedEmployees[indexPath.row];
     [self performSegueWithIdentifier:@"segueToDetailView" sender:self];
 }
 
@@ -91,7 +84,7 @@
     if ([segue.identifier isEqualToString:@"segueToDetailView"])
     {
         DetailViewController *detailView = segue.destinationViewController;
-        detailView.employee = self.selectedEmployee;   
+        detailView.employee = self.selectedEmployee;
     }
     
     else if ([segue.identifier isEqualToString:@"createEmployeeSegue"])
@@ -101,15 +94,9 @@
     }
 }
 
-- (NSArray *)sortedEmployees
+- (void)sendEmployee:(Employee *)newEmployee
 {
-    NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:true];
-    return [self.org.employees sortedArrayUsingDescriptors:@[firstNameDescriptor]];
-}
-
-- (void)sendEmployee:(Employee *)createEmployee
-{
-    [self.org addEmployeesObject:createEmployee];
+    [self.org addEmployeesObject:newEmployee];
     [DatabaseController saveContext];
     [self.myTableView reloadData];
 }
