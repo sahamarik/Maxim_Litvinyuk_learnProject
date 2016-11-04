@@ -16,16 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<Organisation *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSString *name;
-@property (nullable, nonatomic, retain) NSSet<Employee *> *employee;
+@property (nullable, nonatomic, retain) NSSet<Employee *> *employees;
 
 @end
 
 @interface Organisation (CoreDataGeneratedAccessors)
 
-- (void)addEmployeeObject:(Employee *)value;
-- (void)removeEmployeeObject:(Employee *)value;
-- (void)addEmployee:(NSSet<Employee *> *)values;
-- (void)removeEmployee:(NSSet<Employee *> *)values;
+- (void)addEmployeesObject:(Employee *)value;
+- (void)removeEmployeesObject:(Employee *)value;
+- (void)addEmployees:(NSSet<Employee *> *)values;
+- (void)removeEmployees:(NSSet<Employee *> *)values;
 
 @end
 

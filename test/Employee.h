@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Employee+CoreDataClass.h"
 
-@interface Employee (Logic)
 
-- (id)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName salary:(int)salary;
+@interface Employee (Logic)
 
 @end
 

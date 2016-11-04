@@ -2,6 +2,30 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Employee+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:Employee+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:Employee+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:Employee+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "group:Organisation+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:Organisation+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:Organisation+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:Organisation+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
       location = "group:test.xcodeproj">
    </FileRef>
    <FileRef

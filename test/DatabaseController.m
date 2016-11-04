@@ -48,7 +48,7 @@
     NSError *error;
     
     NSString *path = [self.class documentsPath];
-    path = [path stringByAppendingPathComponent:@"PerfectApp.sqlite"];
+    path = [path stringByAppendingPathComponent:@"CoreDataModel.momd"];
     
     NSURL *url = [NSURL fileURLWithPath:path];
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];

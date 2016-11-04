@@ -14,11 +14,11 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Employee"];
 }
 
+@dynamic dateOfBirth;
 @dynamic firstName;
 @dynamic fullName;
 @dynamic lastName;
 @dynamic salary;
-@dynamic dateOfBirth;
 @dynamic organisation;
 
 @end

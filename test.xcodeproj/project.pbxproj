@@ -18,12 +18,8 @@
 		5024D83C1DB8CEA100F0C502 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024D83B1DB8CEA100F0C502 /* DetailViewController.m */; };
 		50278DA61DC387CD00018B37 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 50278DA31DC387CD00018B37 /* Employee.m */; };
 		50278DA71DC387CD00018B37 /* Organisation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50278DA51DC387CD00018B37 /* Organisation.m */; };
-		5028D8061DC240C50066B111 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5028D8041DC240C50066B111 /* Model.xcdatamodeld */; };
-		5028D80F1DC241940066B111 /* Organisation+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028D8081DC241940066B111 /* Organisation+CoreDataClass.m */; };
-		5028D8111DC241940066B111 /* Employee+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028D80C1DC241940066B111 /* Employee+CoreDataClass.m */; };
 		504FE5871DCC7D93004A2074 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 504FE5861DCC7D93004A2074 /* Podfile */; };
-		504FE5991DCC8544004A2074 /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504FE5961DCC8544004A2074 /* Employee+CoreDataProperties.m */; };
-		504FE59A1DCC8544004A2074 /* Organisation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504FE5981DCC8544004A2074 /* Organisation+CoreDataProperties.m */; };
+		504FE5A91DCC9A9C004A2074 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 504FE5A71DCC9A9C004A2074 /* CoreDataModel.xcdatamodeld */; };
 		506A8BA31DB4D4BC00A9540F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A8BA21DB4D4BC00A9540F /* MasterViewController.m */; };
 		50E1AF5E1DB9127A00C5F864 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E1AF5D1DB9127A00C5F864 /* CreateEmployeeViewController.m */; };
 		6430EF9AF73F2B74D320913A /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2E1BFF9D2CC6BE235F5E62 /* libPods-test.a */; };
@@ -70,16 +66,8 @@
 		50278DA31DC387CD00018B37 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		50278DA41DC387CD00018B37 /* Organisation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organisation.h; sourceTree = "<group>"; };
 		50278DA51DC387CD00018B37 /* Organisation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organisation.m; sourceTree = "<group>"; };
-		5028D8051DC240C50066B111 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		5028D8071DC241940066B111 /* Organisation+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Organisation+CoreDataClass.h"; path = "../Organisation+CoreDataClass.h"; sourceTree = "<group>"; };
-		5028D8081DC241940066B111 /* Organisation+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Organisation+CoreDataClass.m"; path = "../Organisation+CoreDataClass.m"; sourceTree = "<group>"; };
-		5028D80B1DC241940066B111 /* Employee+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Employee+CoreDataClass.h"; path = "../Employee+CoreDataClass.h"; sourceTree = "<group>"; };
-		5028D80C1DC241940066B111 /* Employee+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Employee+CoreDataClass.m"; path = "../Employee+CoreDataClass.m"; sourceTree = "<group>"; };
 		504FE5861DCC7D93004A2074 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		504FE5951DCC8544004A2074 /* Employee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Employee+CoreDataProperties.h"; path = "../Employee+CoreDataProperties.h"; sourceTree = "<group>"; };
-		504FE5961DCC8544004A2074 /* Employee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Employee+CoreDataProperties.m"; path = "../Employee+CoreDataProperties.m"; sourceTree = "<group>"; };
-		504FE5971DCC8544004A2074 /* Organisation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Organisation+CoreDataProperties.h"; path = "../Organisation+CoreDataProperties.h"; sourceTree = "<group>"; };
-		504FE5981DCC8544004A2074 /* Organisation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Organisation+CoreDataProperties.m"; path = "../Organisation+CoreDataProperties.m"; sourceTree = "<group>"; };
+		504FE5A81DCC9A9C004A2074 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		506A8BA11DB4D4BC00A9540F /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		506A8BA21DB4D4BC00A9540F /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		50E1AF5C1DB9127A00C5F864 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
@@ -204,16 +192,8 @@
 		5032A7D51DAFBCB8003EB352 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				504FE5A71DCC9A9C004A2074 /* CoreDataModel.xcdatamodeld */,
 				504FE5881DCC848A004A2074 /* Logic */,
-				5028D8041DC240C50066B111 /* Model.xcdatamodeld */,
-				5028D8071DC241940066B111 /* Organisation+CoreDataClass.h */,
-				5028D8081DC241940066B111 /* Organisation+CoreDataClass.m */,
-				5028D80B1DC241940066B111 /* Employee+CoreDataClass.h */,
-				5028D80C1DC241940066B111 /* Employee+CoreDataClass.m */,
-				504FE5951DCC8544004A2074 /* Employee+CoreDataProperties.h */,
-				504FE5961DCC8544004A2074 /* Employee+CoreDataProperties.m */,
-				504FE5971DCC8544004A2074 /* Organisation+CoreDataProperties.h */,
-				504FE5981DCC8544004A2074 /* Organisation+CoreDataProperties.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -438,15 +418,11 @@
 			files = (
 				50278DA61DC387CD00018B37 /* Employee.m in Sources */,
 				5019FF581DC748E10063E8CD /* DatabaseController.m in Sources */,
-				504FE59A1DCC8544004A2074 /* Organisation+CoreDataProperties.m in Sources */,
 				50E1AF5E1DB9127A00C5F864 /* CreateEmployeeViewController.m in Sources */,
-				504FE5991DCC8544004A2074 /* Employee+CoreDataProperties.m in Sources */,
 				50278DA71DC387CD00018B37 /* Organisation.m in Sources */,
-				5028D8061DC240C50066B111 /* Model.xcdatamodeld in Sources */,
 				5021E38B1DA4DB9100F6397F /* AppDelegate.m in Sources */,
-				5028D8111DC241940066B111 /* Employee+CoreDataClass.m in Sources */,
+				504FE5A91DCC9A9C004A2074 /* CoreDataModel.xcdatamodeld in Sources */,
 				506A8BA31DB4D4BC00A9540F /* MasterViewController.m in Sources */,
-				5028D80F1DC241940066B111 /* Organisation+CoreDataClass.m in Sources */,
 				5021E3881DA4DB9100F6397F /* main.m in Sources */,
 				5024D83C1DB8CEA100F0C502 /* DetailViewController.m in Sources */,
 			);
@@ -722,14 +698,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5028D8041DC240C50066B111 /* Model.xcdatamodeld */ = {
+		504FE5A71DCC9A9C004A2074 /* CoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5028D8051DC240C50066B111 /* Model.xcdatamodel */,
+				504FE5A81DCC9A9C004A2074 /* CoreDataModel.xcdatamodel */,
 			);
-			currentVersion = 5028D8051DC240C50066B111 /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = ../Model.xcdatamodeld;
+			currentVersion = 504FE5A81DCC9A9C004A2074 /* CoreDataModel.xcdatamodel */;
+			name = CoreDataModel.xcdatamodeld;
+			path = ../CoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

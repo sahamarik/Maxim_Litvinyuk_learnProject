@@ -10,7 +10,6 @@
 #import "HSDatePickerViewController.h"
 @class Employee;
 
-
 @protocol PassingEmployee <NSObject>
 
 - (void) sendEmployee:(Employee *)createEmployee;
@@ -27,7 +26,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *salaryTextField;
 @property (weak, nonatomic) id<PassingEmployee> delegate;
 
-@property (strong, nonatomic) Employee *createEmployee;
 - (IBAction)saveEditing:(UIButton *)sender;
 - (IBAction)addBirthDate:(UIButton *)sender;
 

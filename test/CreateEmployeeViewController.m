@@ -28,27 +28,22 @@
 - (IBAction)saveEditing:(UIButton *)sender
 {
   
-    if ((self.firstNameTextField.text.length > 0) && (self.lastNameTextField.text.length > 0) && ((self.salaryTextField.text.length > 0) && (([self.salaryTextField.text intValue] / 1))))
+    if ((self.firstNameTextField.text.length > 0) && (self.lastNameTextField.text.length > 0) && ((self.salaryTextField.text.length > 0)))
     {
-        self.createEmployee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
+        Employee *createEmployee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
         
-        self.createEmployee.firstName = self.firstNameTextField.text;
-        self.createEmployee.lastName = self.lastNameTextField.text;
-        self.createEmployee.salary = [self.salaryTextField.text intValue];
-        self.createEmployee.dateOfBirth = self.birthDay;
+        createEmployee.firstName = self.firstNameTextField.text;
+        createEmployee.lastName = self.lastNameTextField.text;
+        createEmployee.salary = self.salaryTextField.text.intValue;
+        createEmployee.dateOfBirth = self.birthDay;
         
         [DatabaseController saveContext];
         
-        [self.delegate sendEmployee:self.createEmployee];
+        [self.delegate sendEmployee:createEmployee];
     }
     else
     {
-        UIAlertView *alert = [ [UIAlertView alloc]
-                              initWithTitle:@"Error"
-                              message:@"Incorrect data"
-                              delegate:nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Incorrect data" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
     [self.navigationController popViewControllerAnimated:true];

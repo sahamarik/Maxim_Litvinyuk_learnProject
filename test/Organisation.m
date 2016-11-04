@@ -8,6 +8,7 @@
 
 #import "Organisation.h"
 #import "Employee.h"
+#import "DatabaseController.h"
 
 @implementation Organisation (Logic)
 
@@ -18,18 +19,21 @@
  
     NSArray *empName = [employeesName componentsSeparatedByString:@" "];
 
-    Employee *myEmp =[[Employee alloc] initWithFirstName:empName[0] lastName:empName[1] salary:employeesSalary];
+    Employee *myEmp = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
+    myEmp.firstName = empName[0];
+    myEmp.lastName = empName[1];
+    myEmp.salary = employeesSalary;
 
-    NSMutableArray *mutableArray = [self.employee mutableCopy];
+    NSMutableArray *mutableArray = [self.employees mutableCopy];
     [mutableArray addObject:myEmp];
     
-    self.employee = [mutableArray copy];
+    self.employees = [mutableArray copy];
 }
 
 // Method calculate average property "salary" of all emlployees array
 - (int)calculateAverageSalary
 {
-    NSNumber *average = [self.employee valueForKeyPath:@"@avg.salary"];
+    NSNumber *average = [self.employees valueForKeyPath:@"@avg.salary"];
    
     return average.intValue;
 }
@@ -39,7 +43,7 @@
 {
     int lowestSalary = INT_MAX;
     Employee *lowestSalariedEmployee;
-    for (Employee *employee in self.employee)
+    for (Employee *employee in self.employees)
     {
         if (employee.salary < lowestSalary )
         {
@@ -55,7 +59,7 @@
 {
     NSMutableArray *arrayWithEmployeesSalary = [NSMutableArray array];
     
-    for (Employee *employee in self.employee)
+    for (Employee *employee in self.employees)
     {
         if (employee.salary == salaryOfEmployee)
         {

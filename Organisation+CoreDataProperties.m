@@ -15,6 +15,6 @@
 }
 
 @dynamic name;
-@dynamic employee;
+@dynamic employees;
 
 @end

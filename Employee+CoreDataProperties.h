@@ -15,11 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Employee *> *)fetchRequest;
 
+@property (nullable, nonatomic, copy) NSDate *dateOfBirth;
 @property (nullable, nonatomic, copy) NSString *firstName;
 @property (nullable, nonatomic, copy) NSString *fullName;
 @property (nullable, nonatomic, copy) NSString *lastName;
 @property (nonatomic) int32_t salary;
-@property (nullable, nonatomic, copy) NSDate *dateOfBirth;
 @property (nullable, nonatomic, retain) Organisation *organisation;
 
 @end
