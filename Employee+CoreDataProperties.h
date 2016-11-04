@@ -1,9 +1,9 @@
 //
 //  Employee+CoreDataProperties.h
-//  test
+//  
 //
-//  Created by Max on 28.10.16.
-//  Copyright © 2016 Max. All rights reserved.
+//  Created by Max on 04.11.16.
+//
 //
 
 #import "Employee+CoreDataClass.h"
@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *fullName;
 @property (nullable, nonatomic, copy) NSString *lastName;
 @property (nonatomic) int32_t salary;
+@property (nullable, nonatomic, copy) NSDate *dateOfBirth;
 @property (nullable, nonatomic, retain) Organisation *organisation;
 
 @end

@@ -10,8 +10,15 @@
 #import "MasterViewController.h"
 #import "Employee.h"
 #import "DatabaseController.h"
+#import "HSDatePickerViewController.h"
 
-@implementation CreateEmployeeViewController
+@interface CreateEmployeeViewController()
+
+@property (strong, nonatomic)NSDate *birthDay;
+
+@end
+
+@implementation CreateEmployeeViewController 
 
 - (void)viewDidLoad
 {
@@ -28,6 +35,7 @@
         self.createEmployee.firstName = self.firstNameTextField.text;
         self.createEmployee.lastName = self.lastNameTextField.text;
         self.createEmployee.salary = [self.salaryTextField.text intValue];
+        self.createEmployee.dateOfBirth = self.birthDay;
         
         [DatabaseController saveContext];
         
@@ -44,6 +52,19 @@
         [alert show];
     }
     [self.navigationController popViewControllerAnimated:true];
+}
+
+- (IBAction)addBirthDate:(UIButton *)sender
+{
+    HSDatePickerViewController *hsdpvc = [[HSDatePickerViewController alloc] init];
+    hsdpvc.delegate = self;
+    
+    [self presentViewController:hsdpvc animated:YES completion:nil];
+}
+
+- (void)hsDatePickerPickedDate:(NSDate *)date;
+{
+    self.birthDay = date;
 }
 
 @end

@@ -1,9 +1,9 @@
 //
 //  Employee+CoreDataProperties.m
-//  test
+//  
 //
-//  Created by Max on 28.10.16.
-//  Copyright © 2016 Max. All rights reserved.
+//  Created by Max on 04.11.16.
+//
 //
 
 #import "Employee+CoreDataProperties.h"
@@ -18,6 +18,7 @@
 @dynamic fullName;
 @dynamic lastName;
 @dynamic salary;
+@dynamic dateOfBirth;
 @dynamic organisation;
 
 @end

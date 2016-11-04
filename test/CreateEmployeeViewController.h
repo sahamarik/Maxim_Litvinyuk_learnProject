@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HSDatePickerViewController.h"
 @class Employee;
 
 
@@ -16,7 +17,7 @@
 
 @end
 
-@interface CreateEmployeeViewController : UIViewController
+@interface CreateEmployeeViewController : UIViewController <HSDatePickerViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
@@ -28,5 +29,6 @@
 
 @property (strong, nonatomic) Employee *createEmployee;
 - (IBAction)saveEditing:(UIButton *)sender;
+- (IBAction)addBirthDate:(UIButton *)sender;
 
 @end
