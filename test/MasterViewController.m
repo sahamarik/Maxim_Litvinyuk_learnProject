@@ -1,4 +1,4 @@
-//
+ //
 //  MasterViewController.m
 //  test
 //
@@ -10,11 +10,15 @@
 #import "Organisation.h"
 #import "Employee.h"
 #import "DetailViewController.h"
+#import "Organisation+CoreDataProperties.h"
+#import "DatabaseController.h"
 
 @interface MasterViewController ()
 
 @property (weak, nonatomic) Employee *selectedEmployee;
+@property (weak, nonatomic) Employee *deletedEmployee;
 @property (strong, nonatomic) Organisation *org;
+@property (readonly, nonatomic) NSArray *sortedEmployees;
 
 @end
 
@@ -24,13 +28,19 @@
 {
     [super viewDidLoad];
     
-    self.org = [[Organisation alloc] initWithName:@"Corporation"];
-    [self.org addEmployeeWithName:@"Rork Smith"];
-    [self.org addEmployeeWithName:@"Rork2 Smith2"];
-    [self.org addEmployeeWithName:@"Rork3 Smith3"];
-    [self.org addEmployeeWithName:@"Rork4 Smith4"];
-    
-    self.title = @"employees";
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Organisation"];
+
+    NSArray *fetchResult = [[DatabaseController sharedInstance].context executeFetchRequest:fetchRequest error:nil];
+    if (fetchResult.count > 0)
+    {   
+        self.org = [DatabaseController requestResultsForPredicate:(NSPredicate *)nil sortDescriptors:(NSArray *)nil entity:(NSString *)@"Organisation"].firstObject;
+    }
+    else
+    {
+        self.org = [NSEntityDescription insertNewObjectForEntityForName:@"Organisation" inManagedObjectContext:[DatabaseController sharedInstance].context];
+        self.org.name = @"Evil Corp";
+        [DatabaseController saveContext];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -46,15 +56,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-    Employee *employee = self.org.employees[indexPath.row];
-    cell.textLabel.text = employee.fullName;
+   // NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:true];
+   // self.sortedArrayInCell = [self.org.employees sortedArrayUsingDescriptors:@[firstNameDescriptor]];
+    
+    Employee *employeeToCell = self.sortedEmployees[indexPath.row];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [employeeToCell valueForKey:@"fullName"]]];
   
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return true;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.deletedEmployee = self.sortedEmployees[indexPath.row];
+    [self.org removeEmployeesObject:self.deletedEmployee];
+    [DatabaseController saveContext];
+    
+    [self.myTableView reloadData];
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedEmployee = self.org.employees [indexPath.row];
+    self.selectedEmployee = self.sortedEmployees[indexPath.row];
     [self performSegueWithIdentifier:@"segueToDetailView" sender:self];
 }
 
@@ -73,11 +101,16 @@
     }
 }
 
-- (void) sendEmployee:(Employee *)createEmployee
+- (NSArray *)sortedEmployees
 {
-    NSMutableArray *mutatedEmployees = [self.org.employees mutableCopy];
-    [mutatedEmployees addObject:createEmployee];
-    self.org.employees = [mutatedEmployees copy];
+    NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:true];
+    return [self.org.employees sortedArrayUsingDescriptors:@[firstNameDescriptor]];
+}
+
+- (void)sendEmployee:(Employee *)createEmployee
+{
+    [self.org addEmployeesObject:createEmployee];
+    [DatabaseController saveContext];
     [self.myTableView reloadData];
 }
 

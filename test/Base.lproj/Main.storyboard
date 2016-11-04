@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w7Q-JL-SYU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w7Q-JL-SYU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,31 +23,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zgU-MF-iwp">
+                                <rect key="frame" x="44" y="100.5" width="265" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0FX-gP-Dva">
+                                <rect key="frame" x="44" y="167" width="265" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add employee`s salary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyE-Sq-Q2d">
+                                <rect key="frame" x="40" y="205" width="181" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add employee`s name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8u-65-BQ4">
+                                <rect key="frame" x="40" y="72" width="178" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZ1-yA-ZP6">
+                                <rect key="frame" x="44" y="233.5" width="267" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xji-6N-N0W">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xji-6N-N0W">
+                                <rect key="frame" x="41" y="358" width="100" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -52,10 +61,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add employee`s last name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-k4-KmC">
+                                <rect key="frame" x="41" y="138.5" width="209.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVQ-Gu-zze">
+                                <rect key="frame" x="44" y="289" width="126" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add birth date"/>
+                                <connections>
+                                    <action selector="addBirthDate:" destination="am9-fR-6Io" eventType="touchUpInside" id="oF4-Rb-3uN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -70,14 +88,15 @@
                             <constraint firstItem="ibm-k4-KmC" firstAttribute="top" secondItem="zgU-MF-iwp" secondAttribute="bottom" constant="8" id="UEo-7R-3DW"/>
                             <constraint firstItem="n8u-65-BQ4" firstAttribute="leading" secondItem="uU5-jN-UEd" secondAttribute="leadingMargin" constant="24" id="W2d-Ia-mQI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0FX-gP-Dva" secondAttribute="trailing" constant="50" id="aiQ-He-o1y"/>
+                            <constraint firstItem="xji-6N-N0W" firstAttribute="top" secondItem="BVQ-Gu-zze" secondAttribute="bottom" constant="39" id="b60-Ux-fsr"/>
+                            <constraint firstItem="BVQ-Gu-zze" firstAttribute="leading" secondItem="uU5-jN-UEd" secondAttribute="leadingMargin" constant="28" id="bwt-AR-gOx"/>
                             <constraint firstItem="wZ1-yA-ZP6" firstAttribute="top" secondItem="QyE-Sq-Q2d" secondAttribute="bottom" constant="8" id="cN4-5I-Cck"/>
                             <constraint firstItem="zgU-MF-iwp" firstAttribute="top" secondItem="n8u-65-BQ4" secondAttribute="bottom" constant="8" id="clg-YZ-spW"/>
-                            <constraint firstItem="xji-6N-N0W" firstAttribute="top" secondItem="wZ1-yA-ZP6" secondAttribute="bottom" constant="23" id="da5-hg-Cpj"/>
                             <constraint firstItem="QyE-Sq-Q2d" firstAttribute="leading" secondItem="uU5-jN-UEd" secondAttribute="leadingMargin" constant="24" id="eD1-Gj-l8q"/>
                             <constraint firstItem="QyE-Sq-Q2d" firstAttribute="top" secondItem="0FX-gP-Dva" secondAttribute="bottom" constant="8" id="eRN-XS-N1l"/>
-                            <constraint firstItem="xji-6N-N0W" firstAttribute="top" secondItem="wZ1-yA-ZP6" secondAttribute="bottom" constant="23" id="fWo-hI-n1K"/>
+                            <constraint firstItem="xji-6N-N0W" firstAttribute="leading" secondItem="uU5-jN-UEd" secondAttribute="leadingMargin" constant="25" id="h7m-LH-zEA"/>
                             <constraint firstItem="wZ1-yA-ZP6" firstAttribute="leading" secondItem="uU5-jN-UEd" secondAttribute="leadingMargin" constant="28" id="hCq-c4-0kI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xji-6N-N0W" secondAttribute="trailing" constant="44" id="pnU-lk-nuP"/>
+                            <constraint firstItem="BVQ-Gu-zze" firstAttribute="top" secondItem="wZ1-yA-ZP6" secondAttribute="bottom" constant="25.5" id="r2O-VX-uHF"/>
                             <constraint firstItem="zgU-MF-iwp" firstAttribute="top" secondItem="n8u-65-BQ4" secondAttribute="bottom" constant="8" id="u3E-nn-aGW"/>
                             <constraint firstItem="0FX-gP-Dva" firstAttribute="top" secondItem="ibm-k4-KmC" secondAttribute="bottom" constant="8" id="v2T-UJ-mpI"/>
                             <constraint firstItem="0FX-gP-Dva" firstAttribute="top" secondItem="ibm-k4-KmC" secondAttribute="bottom" constant="8" id="x1Z-Jz-3bi"/>
@@ -95,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pa9-sa-0cL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="-689"/>
+            <point key="canvasLocation" x="1621.5999999999999" y="-689.5052473763119"/>
         </scene>
         <!--Master View Controller-->
         <scene sceneID="cfy-xc-ZBb">
@@ -107,10 +126,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" rowHeight="54" id="6IT-og-E8Q">
-                                <rect key="frame" x="0.0" y="92" width="375" height="54"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6IT-og-E8Q" id="Bdx-Oj-wdu">
-                                    <frame key="frameInset" width="375" height="53"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -157,6 +176,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7W-Dd-2aY">
+                                <rect key="frame" x="166.5" y="64" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAe-lQ-yjj">
+                                <rect key="frame" x="78" y="97" width="260" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -164,17 +190,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xAe-lQ-yjj" secondAttribute="trailing" constant="21" id="Cax-GP-azn"/>
                             <constraint firstItem="a7W-Dd-2aY" firstAttribute="centerX" secondItem="byW-XV-rZ0" secondAttribute="centerX" id="QYL-zz-JOc"/>
                             <constraint firstItem="a7W-Dd-2aY" firstAttribute="top" secondItem="z4G-mI-DIN" secondAttribute="bottom" id="kPy-xK-Dj3"/>
+                            <constraint firstItem="xAe-lQ-yjj" firstAttribute="top" secondItem="a7W-Dd-2aY" secondAttribute="bottom" constant="12.5" id="kfK-Q9-vob"/>
+                            <constraint firstItem="XoD-Br-Iwg" firstAttribute="top" secondItem="xAe-lQ-yjj" secondAttribute="bottom" constant="549" id="u7t-Kd-NSf"/>
+                            <constraint firstItem="xAe-lQ-yjj" firstAttribute="leading" secondItem="byW-XV-rZ0" secondAttribute="leadingMargin" constant="62" id="zsZ-Tr-wxu"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="BirthDayLabel" destination="xAe-lQ-yjj" id="mhH-1o-e4j"/>
                         <outlet property="detailLabel" destination="a7W-Dd-2aY" id="Wq4-o3-e9a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNs-7n-Lmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517" y="108"/>
+            <point key="canvasLocation" x="1516" y="107.49625187406298"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="meU-Or-72J">

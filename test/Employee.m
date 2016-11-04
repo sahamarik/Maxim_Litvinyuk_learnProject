@@ -8,27 +8,8 @@
 
 #import "Employee.h"
 
-@interface Employee()
 
-
-@property (strong, nonatomic) NSString *lastName;
-
-@end
-
-@implementation Employee
-
-- (id)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName salary:(int)salary
-{
-    self = [super init];
-    if (self)
-    {
-        self.firstName = firstName;
-        self.lastName = lastName;
-        self.salary = salary;
-    }
-    
-    return self;
-}
+@implementation Employee (Logic)
 
 - (NSString *)fullName
 {

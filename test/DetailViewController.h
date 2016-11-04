@@ -14,6 +14,7 @@
 @interface DetailViewController : UIViewController 
 
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *BirthDayLabel;
 @property (weak, nonatomic) Employee *employee;
 
 @end

@@ -7,20 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Organisation+CoreDataClass.h"
 
 @class Employee;
 
-@interface Organisation : NSObject
+@interface Organisation (Logic)
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSArray<Employee *> *employees;
-
-- (id)initWithName:(NSString *)organisationName;
 - (void)addEmployeeWithName:(NSString *)employeesName;
 - (int)calculateAverageSalary;
 - (Employee *)employeeWithLowestSalary;
 - (NSMutableArray *)employeesWithSalary:(int)salaryOfEmployee;
-- (void)removeEmployee:(Employee *)employee;
 
 @end
 
