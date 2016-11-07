@@ -18,7 +18,6 @@ class OrganisationInfoViewController: UIViewController
      
     }
     
-    
     @IBAction func calculateSumOfSalary(_ sender: UIButton)
     {
         salarySum = fetchedOrganisation!.calculateSumOfSalary()
