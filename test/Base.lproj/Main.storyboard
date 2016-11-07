@@ -177,7 +177,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <segue destination="zva-wb-yHa" kind="show" id="cbT-WT-jas"/>
+                                    <segue destination="zva-wb-yHa" kind="show" identifier="segueToEditOrganisation" id="cbT-WT-jas"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -216,13 +216,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7W-Dd-2aY">
-                                <rect key="frame" x="166.5" y="64" width="42" height="20.5"/>
+                                <rect key="frame" x="57" y="64" width="281" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAe-lQ-yjj">
-                                <rect key="frame" x="78" y="97" width="260" height="21"/>
+                                <rect key="frame" x="57" y="140" width="281" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -230,12 +230,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="xAe-lQ-yjj" secondAttribute="trailing" constant="21" id="Cax-GP-azn"/>
-                            <constraint firstItem="a7W-Dd-2aY" firstAttribute="centerX" secondItem="byW-XV-rZ0" secondAttribute="centerX" id="QYL-zz-JOc"/>
-                            <constraint firstItem="a7W-Dd-2aY" firstAttribute="top" secondItem="z4G-mI-DIN" secondAttribute="bottom" id="kPy-xK-Dj3"/>
-                            <constraint firstItem="xAe-lQ-yjj" firstAttribute="top" secondItem="a7W-Dd-2aY" secondAttribute="bottom" constant="12.5" id="kfK-Q9-vob"/>
-                            <constraint firstItem="XoD-Br-Iwg" firstAttribute="top" secondItem="xAe-lQ-yjj" secondAttribute="bottom" constant="549" id="u7t-Kd-NSf"/>
-                            <constraint firstItem="xAe-lQ-yjj" firstAttribute="leading" secondItem="byW-XV-rZ0" secondAttribute="leadingMargin" constant="62" id="zsZ-Tr-wxu"/>
+                            <constraint firstItem="a7W-Dd-2aY" firstAttribute="top" secondItem="z4G-mI-DIN" secondAttribute="bottom" id="ChY-gy-9wB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xAe-lQ-yjj" secondAttribute="trailing" constant="21" id="Qxd-0A-03e"/>
+                            <constraint firstItem="xAe-lQ-yjj" firstAttribute="top" secondItem="a7W-Dd-2aY" secondAttribute="bottom" constant="55" id="cgT-8Q-rRw"/>
+                            <constraint firstItem="xAe-lQ-yjj" firstAttribute="leading" secondItem="byW-XV-rZ0" secondAttribute="leadingMargin" constant="41" id="owq-YR-JG4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a7W-Dd-2aY" secondAttribute="trailing" constant="21" id="t9V-uH-UJx"/>
+                            <constraint firstItem="a7W-Dd-2aY" firstAttribute="leading" secondItem="byW-XV-rZ0" secondAttribute="leadingMargin" constant="41" id="w4v-ng-ugx"/>
                         </constraints>
                     </view>
                     <connections>

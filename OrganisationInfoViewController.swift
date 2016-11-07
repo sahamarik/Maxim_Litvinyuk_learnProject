@@ -8,26 +8,25 @@
 
 import Foundation
 
+
 class OrganisationInfoViewController: UIViewController
 {
-    var salarySum = 0;
-    
-    var fetchedOrganisation = [Organisation]()
+    var salarySum: Int32?
+    var fetchedOrganisation: Organisation?
     
     override func viewDidLoad() {
-       // var fetchedOrganisation = [Organisation]()
-        
-     fetchedOrganisation = (DatabaseController.requestResults(for: nil, sortDescriptors: nil, entity: "Organisation", from: (DatabaseController.sharedInstance().context)) as! [Organisation])
      
     }
     
     
     @IBAction func calculateSumOfSalary(_ sender: UIButton)
     {
-        /// Organisation *editedOrganisation = fetchedOrganisation.firstObject
-        //for
-//        salarySum = fetchedOrganisation[0].calculateSumOfSalary()
-//        print("Sum is \(fetchedOrganisation)");
+        salarySum = fetchedOrganisation!.calculateSumOfSalary()
+        
+        let alertController = UIAlertController(title: "Summary salary of all employees", message: "\(salarySum!)", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
     }
     
 }

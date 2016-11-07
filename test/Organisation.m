@@ -78,13 +78,10 @@
 
 - (int)calculateSumOfSalary
 {
-    int sum;
+    int sum = 0;
     for (Employee *employee in self.employees)
     {
-        for (int i = 0; self.employees.count > i; i++)
-        {
-            sum += employee.salary;
-        }
+            sum = sum + employee.salary;
     }
     return sum;
 }
