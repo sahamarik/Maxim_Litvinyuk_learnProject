@@ -12,6 +12,8 @@
 #import "DetailViewController.h"
 #import "Organisation+CoreDataProperties.h"
 #import "DatabaseController.h"
+#import "test-Swift.h"
+
 
 @interface MasterViewController ()
 
@@ -35,8 +37,9 @@
     {
         self.org = [NSEntityDescription insertNewObjectForEntityForName:@"Organisation" inManagedObjectContext:[DatabaseController sharedInstance].context];
         self.org.name = @"Evil Corp";
-        [DatabaseController saveContext];
+        [DatabaseController saveContext];       
     }
+    NSLog(@"Sum is %d", self.org.calculateSumOfSalary);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -91,6 +94,11 @@
     {
         CreateEmployeeViewController *createView = segue.destinationViewController;
         createView.delegate = self;     // указание на то,что текущий объект будет делегатором для объекта createView
+    }
+    else if ([segue.identifier isEqualToString:@"segueToEditOrganisation"])
+    {
+        OrganisationInfoViewController *infoController = segue.destinationViewController;
+        infoController.fetchedOrganisation = self.org;
     }
 }
 

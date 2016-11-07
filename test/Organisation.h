@@ -18,6 +18,7 @@
 - (Employee *)employeeWithLowestSalary;
 - (NSMutableArray *)employeesWithSalary:(int)salaryOfEmployee;
 - (NSArray *)sortedEmployees;
+- (int)calculateSumOfSalary;
 
 @end
 
