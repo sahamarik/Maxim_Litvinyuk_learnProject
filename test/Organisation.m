@@ -70,15 +70,28 @@
     return arrayWithEmployeesSalary;
 }
 
-- (NSString *)description
-{
-    return [NSString stringWithFormat:@"%@", self.name];
-}
-
 - (NSArray *)sortedEmployees
 {
     NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:true];
     return [self.employees sortedArrayUsingDescriptors:@[firstNameDescriptor]];
+}
+
+- (int)calculateSumOfSalary
+{
+    int sum;
+    for (Employee *employee in self.employees)
+    {
+        for (int i = 0; self.employees.count > i; i++)
+        {
+            sum += employee.salary;
+        }
+    }
+    return sum;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@", self.name];
 }
 
 @end

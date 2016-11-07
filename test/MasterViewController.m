@@ -36,6 +36,8 @@
         self.org = [NSEntityDescription insertNewObjectForEntityForName:@"Organisation" inManagedObjectContext:[DatabaseController sharedInstance].context];
         self.org.name = @"Evil Corp";
         [DatabaseController saveContext];
+        
+        NSLog(@"Sum is %d", self.org.calculateSumOfSalary);
     }
 }
 
