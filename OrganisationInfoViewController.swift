@@ -27,5 +27,4 @@ class OrganisationInfoViewController: UIViewController
         alertController.addAction(defaultAction)
         present(alertController, animated: true, completion: nil)
     }
-    
 }
