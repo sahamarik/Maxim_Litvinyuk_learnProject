@@ -8,23 +8,18 @@
 
 import Foundation
 
-
 class OrganisationInfoViewController: UIViewController
 {
-    var salarySum: Int32?
-    var fetchedOrganisation: Organisation?
-    
-    override func viewDidLoad() {
-     
-    }
+    var fetchedOrganisation: Organisation!
     
     @IBAction func calculateSumOfSalary(_ sender: UIButton)
     {
-        salarySum = fetchedOrganisation!.calculateSumOfSalary()
+        var salarySum: Int32?
+        salarySum = self.fetchedOrganisation.calculateSumOfSalary()
         
         let alertController = UIAlertController(title: "Summary salary of all employees", message: "\(salarySum!)", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
-        present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
