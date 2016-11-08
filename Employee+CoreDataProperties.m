@@ -2,7 +2,7 @@
 //  Employee+CoreDataProperties.m
 //  
 //
-//  Created by Max on 04.11.16.
+//  Created by Max on 08.11.16.
 //
 //
 
@@ -19,6 +19,7 @@
 @dynamic fullName;
 @dynamic lastName;
 @dynamic salary;
+@dynamic order;
 @dynamic organisation;
 
 @end

@@ -2,7 +2,7 @@
 //  Employee+CoreDataProperties.h
 //  
 //
-//  Created by Max on 04.11.16.
+//  Created by Max on 08.11.16.
 //
 //
 
@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *fullName;
 @property (nullable, nonatomic, copy) NSString *lastName;
 @property (nonatomic) int32_t salary;
+@property (nonatomic) int32_t order;
 @property (nullable, nonatomic, retain) Organisation *organisation;
 
 @end

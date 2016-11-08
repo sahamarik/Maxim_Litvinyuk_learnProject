@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *salaryLabel;
 @property (weak, nonatomic) IBOutlet UITextField *salaryTextField;
 @property (weak, nonatomic) id<PassingEmployee> delegate;
+@property (weak, nonatomic) Employee *employeeWithLastOrder;
 
 - (IBAction)saveEditing:(UIButton *)sender;
 - (IBAction)addBirthday:(UIButton *)sender;

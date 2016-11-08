@@ -39,7 +39,12 @@
         self.org.name = @"Evil Corp";
         [DatabaseController saveContext];       
     }
-    NSLog(@"Sum is %d", self.org.calculateSumOfSalary);
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationOrderOfEmployeesUpdated) name:@"Changed" object:nil];
+}
+
+- (void)notificationOrderOfEmployeesUpdated
+{
+    [self.myTableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -75,7 +80,6 @@
     [self.myTableView reloadData];
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.selectedEmployee = self.org.sortedEmployees[indexPath.row];
@@ -94,6 +98,7 @@
     {
         CreateEmployeeViewController *createView = segue.destinationViewController;
         createView.delegate = self;     // указание на то,что текущий объект будет делегатором для объекта createView
+        createView.employeeWithLastOrder = self.org.sortedEmployees.lastObject;
     }
     else if ([segue.identifier isEqualToString:@"segueToEditOrganisation"])
     {
