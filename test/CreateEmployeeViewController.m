@@ -9,15 +9,16 @@
 #import "CreateEmployeeViewController.h"
 #import "MasterViewController.h"
 #import "Employee.h"
+#import "DatabaseController.h"
+#import "HSDatePickerViewController.h"
 
-@interface CreateEmployeeViewController ()
+@interface CreateEmployeeViewController()
 
-
-@property (strong, nonatomic) Employee *createEmployee;
+@property (strong, nonatomic) NSDate *birthday;
 
 @end
 
-@implementation CreateEmployeeViewController
+@implementation CreateEmployeeViewController 
 
 - (void)viewDidLoad
 {
@@ -26,10 +27,39 @@
 
 - (IBAction)saveEditing:(UIButton *)sender
 {
-    self.createEmployee = [[Employee alloc] initWithFirstName:self.firstNameTextField.text lastName:self.lastNameTextField.text salary:[self.salaryTextField.text intValue]];
+  
+    if ((self.firstNameTextField.text.length > 0) && (self.lastNameTextField.text.length > 0) && ((self.salaryTextField.text.length > 0)))
+    {
+        Employee *newEmployee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
+        
+        newEmployee.firstName = self.firstNameTextField.text;
+        newEmployee.lastName = self.lastNameTextField.text;
+        newEmployee.salary = self.salaryTextField.text.intValue;
+        newEmployee.dateOfBirth = self.birthday;
+        
+        [DatabaseController saveContext];
+        
+        [self.delegate sendEmployee:newEmployee];
+        [self.navigationController popViewControllerAnimated:true];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Incorrect data" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (IBAction)addBirthday:(UIButton *)sender
+{
+    HSDatePickerViewController *dataPicker = [HSDatePickerViewController new];
+    dataPicker.delegate = self;
     
-    [self.delegate sendEmployee:self.createEmployee];
-    [self.navigationController popViewControllerAnimated:true];
+    [self presentViewController:dataPicker animated:true completion:nil];
+}
+
+- (void)hsDatePickerPickedDate:(NSDate *)date;
+{
+    self.birthday = date;
 }
 
 @end

@@ -1,4 +1,4 @@
-//
+ //
 //  MasterViewController.m
 //  test
 //
@@ -10,6 +10,10 @@
 #import "Organisation.h"
 #import "Employee.h"
 #import "DetailViewController.h"
+#import "Organisation+CoreDataProperties.h"
+#import "DatabaseController.h"
+#import "test-Swift.h"
+
 
 @interface MasterViewController ()
 
@@ -24,13 +28,18 @@
 {
     [super viewDidLoad];
     
-    self.org = [[Organisation alloc] initWithName:@"Corporation"];
-    [self.org addEmployeeWithName:@"Rork Smith"];
-    [self.org addEmployeeWithName:@"Rork2 Smith2"];
-    [self.org addEmployeeWithName:@"Rork3 Smith3"];
-    [self.org addEmployeeWithName:@"Rork4 Smith4"];
-    
-    self.title = @"employees";
+    NSArray *fetchResult = [DatabaseController requestResultsForPredicate:nil sortDescriptors:nil entity:@"Organisation" fromContext:[DatabaseController sharedInstance].context];
+    if (fetchResult.count > 0)
+    {   
+        self.org = fetchResult.firstObject;
+    }
+    else
+    {
+        self.org = [NSEntityDescription insertNewObjectForEntityForName:@"Organisation" inManagedObjectContext:[DatabaseController sharedInstance].context];
+        self.org.name = @"Evil Corp";
+        [DatabaseController saveContext];       
+    }
+    NSLog(@"Sum is %d", self.org.calculateSumOfSalary);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -46,15 +55,30 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-    Employee *employee = self.org.employees[indexPath.row];
-    cell.textLabel.text = employee.fullName;
+    Employee *employee = self.org.sortedEmployees[indexPath.row];
+    [cell.textLabel setText:employee.fullName];
   
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return true;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedEmployee = self.org.sortedEmployees[indexPath.row];
+    [self.org removeEmployeesObject:self.selectedEmployee];
+    [DatabaseController saveContext];
+    
+    [self.myTableView reloadData];
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedEmployee = self.org.employees [indexPath.row];
+    self.selectedEmployee = self.org.sortedEmployees[indexPath.row];
     [self performSegueWithIdentifier:@"segueToDetailView" sender:self];
 }
 
@@ -63,7 +87,7 @@
     if ([segue.identifier isEqualToString:@"segueToDetailView"])
     {
         DetailViewController *detailView = segue.destinationViewController;
-        detailView.employee = self.selectedEmployee;   
+        detailView.employee = self.selectedEmployee;
     }
     
     else if ([segue.identifier isEqualToString:@"createEmployeeSegue"])
@@ -71,13 +95,17 @@
         CreateEmployeeViewController *createView = segue.destinationViewController;
         createView.delegate = self;     // указание на то,что текущий объект будет делегатором для объекта createView
     }
+    else if ([segue.identifier isEqualToString:@"segueToEditOrganisation"])
+    {
+        OrganisationInfoViewController *infoController = segue.destinationViewController;
+        infoController.fetchedOrganisation = self.org;
+    }
 }
 
-- (void) sendEmployee:(Employee *)createEmployee
+- (void)sendEmployee:(Employee *)newEmployee
 {
-    NSMutableArray *mutatedEmployees = [self.org.employees mutableCopy];
-    [mutatedEmployees addObject:createEmployee];
-    self.org.employees = [mutatedEmployees copy];
+    [self.org addEmployeesObject:newEmployee];
+    [DatabaseController saveContext];
     [self.myTableView reloadData];
 }
 

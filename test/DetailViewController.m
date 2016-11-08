@@ -19,10 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *firstNameOfEmployee = self.employee.firstName;
-    int sal = _employee.salary;
+    
     self.title = self.employee.fullName;
-    self.detailLabel.text = [NSString stringWithFormat:@"%@`s salary is - %d", firstNameOfEmployee, sal];
+    self.detailLabel.text = [NSString stringWithFormat:@"%@`s salary is - %d", self.employee.firstName, self.employee.salary];
+    self.BirthdayLabel.text = [NSString stringWithFormat:@"Birthday - %@", self.employee.dateOfBirth];
 }
 
 @end

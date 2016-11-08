@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Employee;
+#import "HSDatePickerViewController.h"
 
+@class Employee;
 
 @protocol PassingEmployee <NSObject>
 
-- (void) sendEmployee:(Employee *)createEmployee;
+- (void) sendEmployee:(Employee *)newEmployee;
 
 @end
 
-@interface CreateEmployeeViewController : UIViewController
+@interface CreateEmployeeViewController : UIViewController <HSDatePickerViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
@@ -27,5 +28,6 @@
 @property (weak, nonatomic) id<PassingEmployee> delegate;
 
 - (IBAction)saveEditing:(UIButton *)sender;
+- (IBAction)addBirthday:(UIButton *)sender;
 
 @end
