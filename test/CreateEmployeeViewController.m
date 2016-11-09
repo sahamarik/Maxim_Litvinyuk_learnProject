@@ -27,8 +27,7 @@
 
 - (IBAction)saveEditing:(UIButton *)sender
 {
-  
-    if ((self.firstNameTextField.text.length > 0) && (self.lastNameTextField.text.length > 0) && ((self.salaryTextField.text.length > 0)))
+    if ((self.firstNameTextField.text.length > 0) && (self.lastNameTextField.text.length > 0) && (self.salaryTextField.text.length > 0) && (self.birthday != nil))
     {
         Employee *newEmployee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
         
@@ -36,7 +35,7 @@
         newEmployee.lastName = self.lastNameTextField.text;
         newEmployee.salary = self.salaryTextField.text.intValue;
         newEmployee.dateOfBirth = self.birthday;
-        
+        newEmployee.order = self.employeeWithLastOrder.order + 1;
         [DatabaseController saveContext];
         
         [self.delegate sendEmployee:newEmployee];

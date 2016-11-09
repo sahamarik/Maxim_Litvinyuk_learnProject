@@ -72,7 +72,7 @@
 
 - (NSArray *)sortedEmployees
 {
-    NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:true];
+    NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"order" ascending:true];
     return [self.employees sortedArrayUsingDescriptors:@[firstNameDescriptor]];
 }
 
