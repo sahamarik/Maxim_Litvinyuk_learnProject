@@ -51,11 +51,9 @@ class OrganisationInfoViewController: UIViewController
     }
     @IBAction func randomizeOrder(_ sender: UIButton)
     {
-        for var employee: Employee in self.fetchedOrganisation!.employees!.shuffled()
+        for (index,employee) in self.fetchedOrganisation.employees!.shuffled().enumerated()
         {
-            var randNum = arc4random_uniform(UInt32(fetchedOrganisation!.employees!.count))
-            employee.order = Int32(randNum)
-            DatabaseController.saveContext()
+            employee.order = Int32(index)
         }
         
         NotificationCenter.default.post(name: Notification.Name(rawValue: kEmployeesOrderHasChanged), object: nil)
