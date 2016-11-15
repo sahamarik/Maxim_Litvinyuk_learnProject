@@ -36,6 +36,7 @@
         newEmployee.salary = self.salaryTextField.text.intValue;
         newEmployee.dateOfBirth = self.birthday;
         newEmployee.order = self.employeeWithLastOrder.order + 1;
+        newEmployee.isActive = true;
         [DatabaseController saveContext];
         
         [self.delegate sendEmployee:newEmployee];

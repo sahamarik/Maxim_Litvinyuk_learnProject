@@ -18,12 +18,13 @@
 		5024D83C1DB8CEA100F0C502 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024D83B1DB8CEA100F0C502 /* DetailViewController.m */; };
 		50278DA61DC387CD00018B37 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 50278DA31DC387CD00018B37 /* Employee.m */; };
 		50278DA71DC387CD00018B37 /* Organisation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50278DA51DC387CD00018B37 /* Organisation.m */; };
+		502E23001DD32DCB005C1234 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502E22FF1DD32DCB005C1234 /* RequestManager.swift */; };
 		504FE5871DCC7D93004A2074 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 504FE5861DCC7D93004A2074 /* Podfile */; };
 		504FE5A91DCC9A9C004A2074 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 504FE5A71DCC9A9C004A2074 /* CoreDataModel.xcdatamodeld */; };
 		505594571DD0683800EF467F /* OrganisationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505594561DD0683800EF467F /* OrganisationInfoViewController.swift */; };
 		506A8BA31DB4D4BC00A9540F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A8BA21DB4D4BC00A9540F /* MasterViewController.m */; };
 		50E1AF5E1DB9127A00C5F864 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E1AF5D1DB9127A00C5F864 /* CreateEmployeeViewController.m */; };
-		6430EF9AF73F2B74D320913A /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2E1BFF9D2CC6BE235F5E62 /* libPods-test.a */; };
+		BDF6816CC4B59261F05D25BA /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96893551EE7A70B624A2215C /* Pods_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		50278DA31DC387CD00018B37 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		50278DA41DC387CD00018B37 /* Organisation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organisation.h; sourceTree = "<group>"; };
 		50278DA51DC387CD00018B37 /* Organisation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organisation.m; sourceTree = "<group>"; };
+		502E22FF1DD32DCB005C1234 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		504FE5861DCC7D93004A2074 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		504FE5A81DCC9A9C004A2074 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		505594561DD0683800EF467F /* OrganisationInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrganisationInfoViewController.swift; path = ../OrganisationInfoViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 		506A8BA21DB4D4BC00A9540F /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		50E1AF5C1DB9127A00C5F864 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		50E1AF5D1DB9127A00C5F864 /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
-		5A2E1BFF9D2CC6BE235F5E62 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96893551EE7A70B624A2215C /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABB8168D67652CDB6EE49FF /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6430EF9AF73F2B74D320913A /* libPods-test.a in Frameworks */,
+				BDF6816CC4B59261F05D25BA /* Pods_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +110,7 @@
 		4F5707A101928A6C4D27C569 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E1BFF9D2CC6BE235F5E62 /* libPods-test.a */,
+				96893551EE7A70B624A2215C /* Pods_test.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,6 +184,7 @@
 				506A8BA11DB4D4BC00A9540F /* MasterViewController.h */,
 				506A8BA21DB4D4BC00A9540F /* MasterViewController.m */,
 				505594561DD0683800EF467F /* OrganisationInfoViewController.swift */,
+				502E22FF1DD32DCB005C1234 /* RequestManager.swift */,
 				5024D83A1DB8CEA100F0C502 /* DetailViewController.h */,
 				5024D83B1DB8CEA100F0C502 /* DetailViewController.m */,
 				50E1AF5C1DB9127A00C5F864 /* CreateEmployeeViewController.h */,
@@ -428,6 +431,7 @@
 				5021E38B1DA4DB9100F6397F /* AppDelegate.m in Sources */,
 				505594571DD0683800EF467F /* OrganisationInfoViewController.swift in Sources */,
 				504FE5A91DCC9A9C004A2074 /* CoreDataModel.xcdatamodeld in Sources */,
+				502E23001DD32DCB005C1234 /* RequestManager.swift in Sources */,
 				506A8BA31DB4D4BC00A9540F /* MasterViewController.m in Sources */,
 				5021E3881DA4DB9100F6397F /* main.m in Sources */,
 				5024D83C1DB8CEA100F0C502 /* DetailViewController.m in Sources */,
@@ -534,6 +538,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "test-Bridging-Header.h";
+				SWIFT_VERSION = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -566,6 +571,7 @@
 				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -580,6 +586,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "test-Bridging-Header.h";
+				SWIFT_VERSION = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

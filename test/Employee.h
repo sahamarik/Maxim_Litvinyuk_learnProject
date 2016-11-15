@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Employee+CoreDataClass.h"
 
-
 @interface Employee (Logic)
 
 @end

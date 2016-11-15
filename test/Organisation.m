@@ -86,6 +86,34 @@
     return sum;
 }
 
++ (void)parsingJSON:(NSDictionary *)dic
+{
+    [DatabaseController purgeDatabase];
+  
+    for (NSDictionary *rawOrg in dic[@"organizations"])//Create 2 dictionary with organisations
+    {
+           Organisation *orgFromJSON = [NSEntityDescription insertNewObjectForEntityForName:@"Organisation" inManagedObjectContext:[DatabaseController sharedInstance].context];
+            orgFromJSON.name = rawOrg[@"name"];              //add name to organisation
+        
+            for (NSDictionary *rawEmp in rawOrg[@"employees"]) // create separate dictionary with employee`s properties
+            {
+                    Employee *employeeFromJSON = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
+                    
+                    employeeFromJSON.firstName = rawEmp[@"first_name"];
+                    employeeFromJSON.lastName = rawEmp[@"last_name"];
+                if (rawEmp[@"salary"] != [NSNull null])
+                {
+                    employeeFromJSON.salary = [rawEmp[@"salary"] intValue];
+                }
+                    employeeFromJSON.isActive = rawEmp[@"isActive"];
+                    employeeFromJSON.order = [rawEmp[@"order"] intValue];
+                
+                    [DatabaseController saveContext];
+                    [orgFromJSON addEmployeesObject:employeeFromJSON];
+            }
+    }[DatabaseController saveContext];
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%@", self.name];

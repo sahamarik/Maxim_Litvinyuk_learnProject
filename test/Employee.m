@@ -8,7 +8,6 @@
 
 #import "Employee.h"
 
-
 @implementation Employee (Logic)
 
 - (NSString *)fullName

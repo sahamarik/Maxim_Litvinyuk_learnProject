@@ -19,6 +19,6 @@
 - (NSMutableArray *)employeesWithSalary:(int)salaryOfEmployee;
 - (NSArray *)sortedEmployees;
 - (int)calculateSumOfSalary;
++ (void)parsingJSON:(NSDictionary *)dic;
 
 @end
-

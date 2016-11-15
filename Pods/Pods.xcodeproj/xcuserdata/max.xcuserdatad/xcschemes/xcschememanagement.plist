@@ -4,15 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>HSDatePickerViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-test.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +32,21 @@
 			<true/>
 		</dict>
 		<key>6B0B9C928B05BA6346AB032DD0260C56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8981007F052F7F31E7697F0D9300A73B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2F903264A57370F445EE2F39CCAC6C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
