@@ -8,6 +8,10 @@
 
 import Foundation
 
+@objc protocol PassingOrganisationFromJSON: class {
+    func passOrgFromJSON(newOrg: Organisation) -> ()
+}
+
 extension MutableCollection where Indices.Iterator.Element == Index {
     /// Shuffles the contents of this collection.
     mutating func shuffle()
@@ -34,13 +38,13 @@ extension Sequence {
     }
 }
 
-class OrganisationInfoViewController: UIViewController, UIActionSheetDelegate
+class OrganisationInfoViewController: UIViewController
 {
-    let kRefreshTableView = "tableViewHasChanged"
+    weak var delegate: PassingOrganisationFromJSON!
+
     let kEmployeesOrderHasChanged = "Changed"
     
     var fetchedOrganisation: Organisation!
-    var arrayWithFetchedOrganisations: [Organisation]!
     
     @IBAction func calculateSumOfSalary(_ sender: UIButton)
     {
@@ -52,6 +56,7 @@ class OrganisationInfoViewController: UIViewController, UIActionSheetDelegate
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
     @IBAction func randomizeOrder(_ sender: UIButton)
     {
         for (index,employee) in self.fetchedOrganisation.employees!.shuffled().enumerated()
@@ -65,22 +70,24 @@ class OrganisationInfoViewController: UIViewController, UIActionSheetDelegate
     @IBAction func fetchOrganisations(_ sender: UIButton)
     {
         
-            RequestManager.fetchOrganisations(){ response in
-                Organisation.parsingJSON(response)
+        RequestManager.fetchOrganisations(){ [unowned self] response in
+            Organisation.parsingJSON(response)
+        
+        let organisationsActionSheet = UIAlertController(title: "List of fetched organisations", message: "Choose wisely", preferredStyle: .actionSheet)
+        let fetchedOrganisations: [Organisation] = DatabaseController.requestResults(for: nil, sortDescriptors: nil, entity: "Organisation") as! [Organisation]
+            
+        for org in fetchedOrganisations
+        {
+            let messageAction = UIAlertAction(title: org.name, style: .default, handler: { [weak self] (action) in // weak self
+                
+            self!.delegate?.passOrgFromJSON(newOrg: org)
+                
+            self!.navigationController!.popViewController(animated: true)
+            })
+            
+            organisationsActionSheet.addAction(messageAction)
         }
-            let organisationsActionSheet = UIAlertController(title: "List of fetched organisations", message: "Choose wisely", preferredStyle: UIAlertControllerStyle.actionSheet)
-            self.arrayWithFetchedOrganisations = DatabaseController.requestResults(for: nil, sortDescriptors: nil, entity: "Organisation") as! [Organisation]
-            for org in self.arrayWithFetchedOrganisations
-                {
-                    let messageAction = UIAlertAction(title: org.name, style: UIAlertActionStyle.default, handler: { (action) in
-                        
-                        NotificationCenter.default.post(name: Notification.Name(rawValue: self.kRefreshTableView), object: self, userInfo: ["org" : org])
-                        if let navController = self.navigationController {
-                            navController.popViewController(animated: true)
-                        }
-                    })
-                    organisationsActionSheet.addAction(messageAction)
-                }
-            self.present(organisationsActionSheet, animated: true, completion: nil)
-        }
+        self.present(organisationsActionSheet, animated: true, completion: nil)
     }
+}
+}

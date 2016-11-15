@@ -11,6 +11,8 @@
 
 @interface Employee (Logic)
 
++ (instancetype)createEmployeeWithRawData:(NSDictionary *)dict;
+
 @end
 
 

@@ -15,7 +15,7 @@
 #import "test-Swift.h"
 
 
-@interface MasterViewController ()
+@interface MasterViewController () <PassingOrganisationFromJSON>
 
 @property (weak, nonatomic) Employee *selectedEmployee;
 @property (strong, nonatomic) Organisation *org;
@@ -40,18 +40,10 @@
         [DatabaseController saveContext];       
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationOrderOfEmployeesUpdated) name:@"Changed" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recieveRefreshTableViewNotification:) name:@"tableViewHasChanged" object:nil];
 }
 
 - (void)notificationOrderOfEmployeesUpdated
 {
-    [self.myTableView reloadData];
-}
-
-- (void)recieveRefreshTableViewNotification:(NSNotification *)notificationWithOrg
-{
-    self.org = notificationWithOrg.userInfo[@"org"];
-    
     [self.myTableView reloadData];
 }
 
@@ -112,6 +104,7 @@
     {
         OrganisationInfoViewController *infoController = segue.destinationViewController;
         infoController.fetchedOrganisation = self.org;
+        infoController.delegate = self;
     }
 }
 
@@ -119,6 +112,12 @@
 {
     [self.org addEmployeesObject:newEmployee];
     [DatabaseController saveContext];
+    [self.myTableView reloadData];
+}
+
+- (void)passOrgFromJSONWithNewOrg:(Organisation *)newOrg
+{
+    self.org = newOrg;
     [self.myTableView reloadData];
 }
 
