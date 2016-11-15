@@ -144,6 +144,15 @@
                                     <action selector="randomizeOrder:" destination="zva-wb-yHa" eventType="touchUpInside" id="5zv-h0-f3q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hO-FO-pLk">
+                                <rect key="frame" x="93" y="223" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Fetch organizations"/>
+                                <connections>
+                                    <action selector="fetchOrganisations:" destination="zva-wb-yHa" eventType="touchUpInside" id="BlW-xs-EQg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -173,7 +182,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6IT-og-E8Q" id="Bdx-Oj-wdu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -248,10 +257,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-01-Mb3">
+                                <rect key="frame" x="57" y="217" width="281" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UJa-01-Mb3" firstAttribute="leading" secondItem="byW-XV-rZ0" secondAttribute="leadingMargin" constant="41" id="A6H-fU-f7W"/>
                             <constraint firstItem="a7W-Dd-2aY" firstAttribute="top" secondItem="z4G-mI-DIN" secondAttribute="bottom" id="ChY-gy-9wB"/>
+                            <constraint firstItem="UJa-01-Mb3" firstAttribute="top" secondItem="rjv-d7-vxp" secondAttribute="bottom" constant="16" id="Hcs-zU-NpR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xAe-lQ-yjj" secondAttribute="trailing" constant="21" id="Qxd-0A-03e"/>
                             <constraint firstItem="rjv-d7-vxp" firstAttribute="leading" secondItem="byW-XV-rZ0" secondAttribute="leadingMargin" constant="41" id="TiG-Dl-9jj"/>
                             <constraint firstItem="rjv-d7-vxp" firstAttribute="top" secondItem="xAe-lQ-yjj" secondAttribute="bottom" constant="19" id="UFm-p3-QGa"/>
@@ -259,12 +276,14 @@
                             <constraint firstItem="xAe-lQ-yjj" firstAttribute="leading" secondItem="byW-XV-rZ0" secondAttribute="leadingMargin" constant="41" id="owq-YR-JG4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="a7W-Dd-2aY" secondAttribute="trailing" constant="21" id="t9V-uH-UJx"/>
                             <constraint firstItem="a7W-Dd-2aY" firstAttribute="leading" secondItem="byW-XV-rZ0" secondAttribute="leadingMargin" constant="41" id="w4v-ng-ugx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UJa-01-Mb3" secondAttribute="trailing" constant="21" id="wvz-ro-EOe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rjv-d7-vxp" secondAttribute="trailing" constant="21" id="xw4-wm-Eub"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="BirthdayLabel" destination="xAe-lQ-yjj" id="0hE-Pm-auB"/>
                         <outlet property="detailLabel" destination="a7W-Dd-2aY" id="Wq4-o3-e9a"/>
+                        <outlet property="isActiveEmployeeLabel" destination="UJa-01-Mb3" id="ESa-CE-mUq"/>
                         <outlet property="orderOfEmployeeLabel" destination="rjv-d7-vxp" id="jEa-7l-sZR"/>
                     </connections>
                 </viewController>

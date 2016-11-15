@@ -7,6 +7,11 @@
 //
 
 import Foundation
+
+@objc protocol PassingOrganisationFromJSON: class {
+    func passOrgFromJSON(newOrg: Organisation) -> ()
+}
+
 extension MutableCollection where Indices.Iterator.Element == Index {
     /// Shuffles the contents of this collection.
     mutating func shuffle()
@@ -35,6 +40,8 @@ extension Sequence {
 
 class OrganisationInfoViewController: UIViewController
 {
+    weak var delegate: PassingOrganisationFromJSON!
+
     let kEmployeesOrderHasChanged = "Changed"
     
     var fetchedOrganisation: Organisation!
@@ -49,6 +56,7 @@ class OrganisationInfoViewController: UIViewController
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
     @IBAction func randomizeOrder(_ sender: UIButton)
     {
         for (index,employee) in self.fetchedOrganisation.employees!.shuffled().enumerated()
@@ -58,4 +66,28 @@ class OrganisationInfoViewController: UIViewController
         
         NotificationCenter.default.post(name: Notification.Name(rawValue: kEmployeesOrderHasChanged), object: nil)
     }
+    
+    @IBAction func fetchOrganisations(_ sender: UIButton)
+    {
+        
+        RequestManager.fetchOrganisations(){ [unowned self] response in
+            Organisation.parsingJSON(response)
+        
+        let organisationsActionSheet = UIAlertController(title: "List of fetched organisations", message: "Choose wisely", preferredStyle: .actionSheet)
+        let fetchedOrganisations: [Organisation] = DatabaseController.requestResults(for: nil, sortDescriptors: nil, entity: "Organisation") as! [Organisation]
+            
+        for org in fetchedOrganisations
+        {
+            let messageAction = UIAlertAction(title: org.name, style: .default, handler: { [weak self] (action) in // weak self
+                
+            self!.delegate?.passOrgFromJSON(newOrg: org)
+                
+            self!.navigationController!.popViewController(animated: true)
+            })
+            
+            organisationsActionSheet.addAction(messageAction)
+        }
+        self.present(organisationsActionSheet, animated: true, completion: nil)
+    }
+}
 }

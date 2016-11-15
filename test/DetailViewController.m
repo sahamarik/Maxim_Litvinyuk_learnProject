@@ -24,6 +24,7 @@
     self.detailLabel.text = [NSString stringWithFormat:@"%@`s salary is - %d", self.employee.firstName, self.employee.salary];
     self.BirthdayLabel.text = [NSString stringWithFormat:@"Birthday - %@", self.employee.dateOfBirth];
     self.orderOfEmployeeLabel.text = [NSString stringWithFormat:@"Employee order is - %d", self.employee.order];
+    self.isActiveEmployeeLabel.text = [NSString stringWithFormat:@"Employee is active - %d", self.employee.isActive];
 }
 
 @end

@@ -2,8 +2,9 @@
 //  Employee+CoreDataProperties.m
 //  
 //
-//  Created by Max on 08.11.16.
+//  Created by Max on 09.11.16.
 //
+//  This file was automatically generated and should not be edited.
 //
 
 #import "Employee+CoreDataProperties.h"
@@ -18,8 +19,9 @@
 @dynamic firstName;
 @dynamic fullName;
 @dynamic lastName;
-@dynamic salary;
 @dynamic order;
+@dynamic salary;
+@dynamic isActive;
 @dynamic organisation;
 
 @end

@@ -16,14 +16,14 @@
 - (void)addEmployeeWithName:(NSString *)employeesName //andLastName:(NSString *)employeesLastName
 {
     int employeesSalary = ((arc4random_uniform(490) + 10) * 10);
- 
+    
     NSArray *empName = [employeesName componentsSeparatedByString:@" "];
-
+    
     Employee *myEmp = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
     myEmp.firstName = empName[0];
     myEmp.lastName = empName[1];
     myEmp.salary = employeesSalary;
-
+    
     NSMutableArray *mutableArray = [self.employees mutableCopy];
     [mutableArray addObject:myEmp];
     self.employees = [mutableArray copy];
@@ -34,7 +34,7 @@
 - (int)calculateAverageSalary
 {
     NSNumber *average = [self.employees valueForKeyPath:@"@avg.salary"];
-   
+    
     return average.intValue;
 }
 
@@ -81,9 +81,35 @@
     int sum = 0;
     for (Employee *employee in self.employees)
     {
-            sum = sum + employee.salary;
+        sum = sum + employee.salary;
     }
     return sum;
+}
+
++ (instancetype)createOrganisationWithRawData:(NSDictionary *)dict
+{
+    Organisation *orgFromJSON = [NSEntityDescription insertNewObjectForEntityForName:@"Organisation" inManagedObjectContext:[DatabaseController sharedInstance].context];
+    orgFromJSON.name = dict[@"name"];              //add name to organisation
+    return orgFromJSON;
+}
+
++ (void)parsingJSON:(NSDictionary *)dic
+{
+    [DatabaseController purgeDatabase];
+    
+    for (NSDictionary *rawOrg in dic[@"organizations"])//Create 2 dictionary with organisations
+    {      
+        Organisation *orgFromJSON = [Organisation createOrganisationWithRawData:rawOrg];
+
+        for (NSDictionary *rawEmp in rawOrg[@"employees"]) // create separate dictionary with employee`s properties
+        {
+            Employee *employeeFromJSON = [Employee createEmployeeWithRawData:rawEmp];
+            
+            [DatabaseController saveContext];
+            [orgFromJSON addEmployeesObject:employeeFromJSON];
+        }
+    }
+    [DatabaseController saveContext];
 }
 
 - (NSString *)description

@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Employee+CoreDataClass.h"
 
-
 @interface Employee (Logic)
+
++ (instancetype)createEmployeeWithRawData:(NSDictionary *)dict;
 
 @end
 

@@ -15,7 +15,7 @@
 #import "test-Swift.h"
 
 
-@interface MasterViewController ()
+@interface MasterViewController () <PassingOrganisationFromJSON>
 
 @property (weak, nonatomic) Employee *selectedEmployee;
 @property (strong, nonatomic) Organisation *org;
@@ -104,6 +104,7 @@
     {
         OrganisationInfoViewController *infoController = segue.destinationViewController;
         infoController.fetchedOrganisation = self.org;
+        infoController.delegate = self;
     }
 }
 
@@ -111,6 +112,12 @@
 {
     [self.org addEmployeesObject:newEmployee];
     [DatabaseController saveContext];
+    [self.myTableView reloadData];
+}
+
+- (void)passOrgFromJSONWithNewOrg:(Organisation *)newOrg
+{
+    self.org = newOrg;
     [self.myTableView reloadData];
 }
 
