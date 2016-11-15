@@ -40,10 +40,18 @@
         [DatabaseController saveContext];       
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationOrderOfEmployeesUpdated) name:@"Changed" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recieveRefreshTableViewNotification:) name:@"tableViewHasChanged" object:nil];
 }
 
 - (void)notificationOrderOfEmployeesUpdated
 {
+    [self.myTableView reloadData];
+}
+
+- (void)recieveRefreshTableViewNotification:(NSNotification *)notificationWithOrg
+{
+    self.org = notificationWithOrg.userInfo[@"org"];
+    
     [self.myTableView reloadData];
 }
 

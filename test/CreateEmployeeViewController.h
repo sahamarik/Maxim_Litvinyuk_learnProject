@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HSDatePickerViewController.h"
+//#import <HSDatePickerViewController/HSDatePickerViewController.h>
+@import HSDatePickerViewController;
 
 @class Employee;
 
