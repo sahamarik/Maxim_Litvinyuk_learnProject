@@ -16,4 +16,6 @@
 #import "Employee.h"
 #import "Organisation.h"
 #import "DatabaseController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+@import SVProgressHUD;
 //#import "HSDatePickerViewController.h"
