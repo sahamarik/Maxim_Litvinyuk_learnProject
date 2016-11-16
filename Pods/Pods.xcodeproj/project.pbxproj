@@ -1,781 +1,2704 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0C1B4E9FFB8B81E8833A3BAD537B1990 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D8F2A5553C2CFAEBD16752FD27379C /* Notifications.swift */; };
-		12118C354EFA36292F82A8D0CFCE45B2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59262C7B539D3915327B86D66788A40B /* Request.swift */; };
-		21AA38E417EFBE3B03659368A7DB3D72 /* Pods-test-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6AF481A8D3C998B2D0C1E4DFD1786CA /* Pods-test-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		344C6DD2D234733709818EF43C2A4F49 /* Pods-test-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A5AD1311450E5B84A8EFEB3B77F9A /* Pods-test-dummy.m */; };
-		3982B850C43B41BA6D25F440F0412E9B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B230F03249B517417C4DD2467B134C /* Timeline.swift */; };
-		62143065F94E53F437DCE5D7A998D66D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907427FF596F0028CD71F0E5BA5187C5 /* AFError.swift */; };
-		6FEB4C0A1A99715B4D8B84A39C2E300E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E38BC18A013094CD48479B20656D0F1 /* Alamofire.swift */; };
-		86ED08F33B7D357932A9AB743E9D9EA7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187315EE3FE653351D226271582BF17D /* Response.swift */; };
-		8C9B3840456D54891B0BCA333DD85DC2 /* HSDatePickerViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE713C8DA3F2150E86BBD2F4D7328C2F /* HSDatePickerViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D463A0A4C65C02FDD5211F0F3C6F8B8 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF12396DA4911DE36CC64A5F611FE278 /* Alamofire-dummy.m */; };
-		907AB123FBC8BC9340D5B7350CE828DF /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C770ECA6B7AD84A1EA372D485500D0 /* SessionDelegate.swift */; };
-		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42737ED98CCAF87A68FAE6B02CD7DF34 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99CC2949F6E34732F89D8EAE80ADA387 /* HSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30F69E749F258DE3CAFE6D25DA0136E /* HSDatePickerViewController.m */; };
-		9DE08500D23944B922E36E5FA92EC762 /* HSDatePickerViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE8F7D2426D67446FF7FE141C08C16 /* HSDatePickerViewController-dummy.m */; };
-		A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C13D1E04630DC80A1133AF39F2CEE7 /* SessionManager.swift */; };
-		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B14071495C5BD3820E86795C737036B /* ParameterEncoding.swift */; };
-		B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1CED201ECC65FD86617834FF6F37CC /* ResponseSerialization.swift */; };
-		C0AEA97E7684DDAD56998C0AE198A433 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441C27985A808EB1ECCB481DB4F7E27 /* ServerTrustPolicy.swift */; };
-		C629EF77D419EA91AEBC6098CB7D330F /* HSDatePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B790D2F5A652A163AA0D1337AC1E3772 /* HSDatePickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3636A630248F015A20662967D3B92CA /* MultipartFormData.swift */; };
-		C9AE760DF834D929A3092DF9C62B83D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		DF1BBF94997A2F4248B42B25EA919EC2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444F4575446CDCADE46A8CDA4B897960 /* Result.swift */; };
-		E1F583CB4A68A928CD197250AA752926 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17737BCC0FC11AD8A7407FC5D382EFD3 /* TaskDelegate.swift */; };
-		E2A1C34237B4E928E5F85C097F4C2551 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728FCF9438E2218F1C976B496C6BAA70 /* DispatchQueue+Alamofire.swift */; };
-		E59BF19C0AFA68B741552319FC478C7B /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E8533D6C490CD8359E204A0189451 /* NetworkReachabilityManager.swift */; };
-		F79D258D63EC3F5B1E8866C6F24FEA68 /* HSDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03AFC962850ECA07C505DEF12350E67D /* HSDatePickerViewController.xib */; };
-		FFFDD494EE6D1B83DDAF5F2721F685A6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D57E13893E9F242BEE270D4FE8BA9 /* Validation.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2618ED5B9B25C7FE2F3195733E88849F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
-			remoteInfo = Alamofire;
-		};
-		889F9977AE9A1746AAFBDA6BAB5B8D46 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E2F903264A57370F445EE2F39CCAC6C6;
-			remoteInfo = HSDatePickerViewController;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		03AFC962850ECA07C505DEF12350E67D /* HSDatePickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = HSDatePickerViewController.xib; path = HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.xib; sourceTree = "<group>"; };
-		0E38BC18A013094CD48479B20656D0F1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		154E8533D6C490CD8359E204A0189451 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		17737BCC0FC11AD8A7407FC5D382EFD3 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		187315EE3FE653351D226271582BF17D /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		199FB06D5DDE9DEA47A9287480165A18 /* Pods-test-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-test-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2BFBC0E67CD6FFE41BD3052789880445 /* HSDatePickerViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HSDatePickerViewController-prefix.pch"; sourceTree = "<group>"; };
-		2E1CED201ECC65FD86617834FF6F37CC /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		31E59304703C9037FC6FEC34A11BD566 /* Pods-test-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-test-acknowledgements.plist"; sourceTree = "<group>"; };
-		42737ED98CCAF87A68FAE6B02CD7DF34 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		444F4575446CDCADE46A8CDA4B897960 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		48C770ECA6B7AD84A1EA372D485500D0 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		4C4A5AD1311450E5B84A8EFEB3B77F9A /* Pods-test-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-test-dummy.m"; sourceTree = "<group>"; };
-		4E26DF9238B19EBF4E40DC6A32A4CC54 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		50DA8E553AEB7EA9539F385AD53B7624 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59262C7B539D3915327B86D66788A40B /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		5B14071495C5BD3820E86795C737036B /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		62C13D1E04630DC80A1133AF39F2CEE7 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		70555F93F82EAE05DE00AC11CB0CEBB3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		728FCF9438E2218F1C976B496C6BAA70 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		770F2CE5C5032F32200FFF8977983273 /* HSDatePickerViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HSDatePickerViewController.modulemap; sourceTree = "<group>"; };
-		7755EFDCF85628937AB3FFC2258F417E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77CA746846D6FFD5D202CBEC9C4BE395 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		7BF768B9C0B25E38B693EF74CCA55BE7 /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-test.release.xcconfig"; sourceTree = "<group>"; };
-		7D243A608E80A699D081B37BAAB2B07A /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		8441C27985A808EB1ECCB481DB4F7E27 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		8526CE59558E5F9B0D0188118D037A21 /* HSDatePickerViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HSDatePickerViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FC278281A6C5D1ECFDEC1CB3CBBFB44 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		907427FF596F0028CD71F0E5BA5187C5 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98D8F2A5553C2CFAEBD16752FD27379C /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		9CBE8F7D2426D67446FF7FE141C08C16 /* HSDatePickerViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HSDatePickerViewController-dummy.m"; sourceTree = "<group>"; };
-		AB0E4F0C6AEE4E28F72CDADA973F2017 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
-		B790D2F5A652A163AA0D1337AC1E3772 /* HSDatePickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HSDatePickerViewController.h; path = HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.h; sourceTree = "<group>"; };
-		C30D57E13893E9F242BEE270D4FE8BA9 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D30F69E749F258DE3CAFE6D25DA0136E /* HSDatePickerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HSDatePickerViewController.m; path = HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.m; sourceTree = "<group>"; };
-		D6AF481A8D3C998B2D0C1E4DFD1786CA /* Pods-test-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-test-umbrella.h"; sourceTree = "<group>"; };
-		DF12396DA4911DE36CC64A5F611FE278 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		DF9CD699A394541D05402FC0A5CBA6A1 /* Pods-test-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-test-frameworks.sh"; sourceTree = "<group>"; };
-		E3636A630248F015A20662967D3B92CA /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		EE713C8DA3F2150E86BBD2F4D7328C2F /* HSDatePickerViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HSDatePickerViewController-umbrella.h"; sourceTree = "<group>"; };
-		F1E89A186B0BA8B8E2E1C40DBEF13B8C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3B230F03249B517417C4DD2467B134C /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		FCECA60E2F021A3B5588C77BFF4A996A /* Pods-test.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-test.modulemap"; sourceTree = "<group>"; };
-		FD629B3B44B3F4FABD276F9DDD61CE38 /* HSDatePickerViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HSDatePickerViewController.xcconfig; sourceTree = "<group>"; };
-		FF553DA09E01987CE47E5F4BA5CBA2A3 /* Pods-test-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-test-resources.sh"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		5FA4C54721D5688CDACE3F023521CCF0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9AE760DF834D929A3092DF9C62B83D8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8FC0F98FA872F6733FE8EC55495D8E12 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6FEB4C0A1A99715B4D8B84A39C2E300E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		10FD835BF978B3C643173A4D20D743B9 /* HSDatePickerViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B790D2F5A652A163AA0D1337AC1E3772 /* HSDatePickerViewController.h */,
-				D30F69E749F258DE3CAFE6D25DA0136E /* HSDatePickerViewController.m */,
-				5AE9B16FF9302A25419BDECFA8103A3A /* Resources */,
-				8E797A102EDFA004BB1326E0A52DB92B /* Support Files */,
-			);
-			path = HSDatePickerViewController;
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		483DBF15A391E3741AE40139EBA2C8FE /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4E3389925B914538488EA32FE7ED6B2D /* Pods-test */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		4B3D1E018BECF7A566432283FF5C641D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7D243A608E80A699D081B37BAAB2B07A /* Alamofire.modulemap */,
-				77CA746846D6FFD5D202CBEC9C4BE395 /* Alamofire.xcconfig */,
-				DF12396DA4911DE36CC64A5F611FE278 /* Alamofire-dummy.m */,
-				4E26DF9238B19EBF4E40DC6A32A4CC54 /* Alamofire-prefix.pch */,
-				42737ED98CCAF87A68FAE6B02CD7DF34 /* Alamofire-umbrella.h */,
-				7755EFDCF85628937AB3FFC2258F417E /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
-			sourceTree = "<group>";
-		};
-		4E3389925B914538488EA32FE7ED6B2D /* Pods-test */ = {
-			isa = PBXGroup;
-			children = (
-				50DA8E553AEB7EA9539F385AD53B7624 /* Info.plist */,
-				FCECA60E2F021A3B5588C77BFF4A996A /* Pods-test.modulemap */,
-				199FB06D5DDE9DEA47A9287480165A18 /* Pods-test-acknowledgements.markdown */,
-				31E59304703C9037FC6FEC34A11BD566 /* Pods-test-acknowledgements.plist */,
-				4C4A5AD1311450E5B84A8EFEB3B77F9A /* Pods-test-dummy.m */,
-				DF9CD699A394541D05402FC0A5CBA6A1 /* Pods-test-frameworks.sh */,
-				FF553DA09E01987CE47E5F4BA5CBA2A3 /* Pods-test-resources.sh */,
-				D6AF481A8D3C998B2D0C1E4DFD1786CA /* Pods-test-umbrella.h */,
-				AB0E4F0C6AEE4E28F72CDADA973F2017 /* Pods-test.debug.xcconfig */,
-				7BF768B9C0B25E38B693EF74CCA55BE7 /* Pods-test.release.xcconfig */,
-			);
-			name = "Pods-test";
-			path = "Target Support Files/Pods-test";
-			sourceTree = "<group>";
-		};
-		5AE9B16FF9302A25419BDECFA8103A3A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				03AFC962850ECA07C505DEF12350E67D /* HSDatePickerViewController.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B2B73DEECBF6EAA09A814C573EE8C975 /* Pods */,
-				BD36BCA6E9C0DD0CF69C9A88EC867525 /* Products */,
-				483DBF15A391E3741AE40139EBA2C8FE /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		8E797A102EDFA004BB1326E0A52DB92B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				770F2CE5C5032F32200FFF8977983273 /* HSDatePickerViewController.modulemap */,
-				FD629B3B44B3F4FABD276F9DDD61CE38 /* HSDatePickerViewController.xcconfig */,
-				9CBE8F7D2426D67446FF7FE141C08C16 /* HSDatePickerViewController-dummy.m */,
-				2BFBC0E67CD6FFE41BD3052789880445 /* HSDatePickerViewController-prefix.pch */,
-				EE713C8DA3F2150E86BBD2F4D7328C2F /* HSDatePickerViewController-umbrella.h */,
-				70555F93F82EAE05DE00AC11CB0CEBB3 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HSDatePickerViewController";
-			sourceTree = "<group>";
-		};
-		9EC128042C8643C68F0747465BB4A22D /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				907427FF596F0028CD71F0E5BA5187C5 /* AFError.swift */,
-				0E38BC18A013094CD48479B20656D0F1 /* Alamofire.swift */,
-				728FCF9438E2218F1C976B496C6BAA70 /* DispatchQueue+Alamofire.swift */,
-				E3636A630248F015A20662967D3B92CA /* MultipartFormData.swift */,
-				154E8533D6C490CD8359E204A0189451 /* NetworkReachabilityManager.swift */,
-				98D8F2A5553C2CFAEBD16752FD27379C /* Notifications.swift */,
-				5B14071495C5BD3820E86795C737036B /* ParameterEncoding.swift */,
-				59262C7B539D3915327B86D66788A40B /* Request.swift */,
-				187315EE3FE653351D226271582BF17D /* Response.swift */,
-				2E1CED201ECC65FD86617834FF6F37CC /* ResponseSerialization.swift */,
-				444F4575446CDCADE46A8CDA4B897960 /* Result.swift */,
-				8441C27985A808EB1ECCB481DB4F7E27 /* ServerTrustPolicy.swift */,
-				48C770ECA6B7AD84A1EA372D485500D0 /* SessionDelegate.swift */,
-				62C13D1E04630DC80A1133AF39F2CEE7 /* SessionManager.swift */,
-				17737BCC0FC11AD8A7407FC5D382EFD3 /* TaskDelegate.swift */,
-				F3B230F03249B517417C4DD2467B134C /* Timeline.swift */,
-				C30D57E13893E9F242BEE270D4FE8BA9 /* Validation.swift */,
-				4B3D1E018BECF7A566432283FF5C641D /* Support Files */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		B2B73DEECBF6EAA09A814C573EE8C975 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9EC128042C8643C68F0747465BB4A22D /* Alamofire */,
-				10FD835BF978B3C643173A4D20D743B9 /* HSDatePickerViewController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BD36BCA6E9C0DD0CF69C9A88EC867525 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F1E89A186B0BA8B8E2E1C40DBEF13B8C /* Alamofire.framework */,
-				8526CE59558E5F9B0D0188118D037A21 /* HSDatePickerViewController.framework */,
-				8FC278281A6C5D1ECFDEC1CB3CBBFB44 /* Pods_test.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		A16C6422A84DE3ADC6750D5106243476 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21AA38E417EFBE3B03659368A7DB3D72 /* Pods-test-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B6B1A58800392D69A4C1675B6ED223D6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8C9B3840456D54891B0BCA333DD85DC2 /* HSDatePickerViewController-umbrella.h in Headers */,
-				C629EF77D419EA91AEBC6098CB7D330F /* HSDatePickerViewController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EFDF3B631BBB965A372347705CA14854 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */;
-			buildPhases = (
-				120C4E824DDCCA024C170A491FF221A5 /* Sources */,
-				B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */,
-				EFDF3B631BBB965A372347705CA14854 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Alamofire;
-			productName = Alamofire;
-			productReference = F1E89A186B0BA8B8E2E1C40DBEF13B8C /* Alamofire.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		8981007F052F7F31E7697F0D9300A73B /* Pods-test */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 056EF21828684B65A616CE1AAF6F913D /* Build configuration list for PBXNativeTarget "Pods-test" */;
-			buildPhases = (
-				998C57B6D2FC09DED0E81F0B7180AC4D /* Sources */,
-				8FC0F98FA872F6733FE8EC55495D8E12 /* Frameworks */,
-				A16C6422A84DE3ADC6750D5106243476 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5ADA1FFDFC16E690084629B6E57027A1 /* PBXTargetDependency */,
-				859A369521D2F8BF766029622F62131B /* PBXTargetDependency */,
-			);
-			name = "Pods-test";
-			productName = "Pods-test";
-			productReference = 8FC278281A6C5D1ECFDEC1CB3CBBFB44 /* Pods_test.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E2F903264A57370F445EE2F39CCAC6C6 /* HSDatePickerViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 188C9EC846E926C797842F877D89B746 /* Build configuration list for PBXNativeTarget "HSDatePickerViewController" */;
-			buildPhases = (
-				0D2F30E3714B2C6C1110C01B5E2183A9 /* Sources */,
-				5FA4C54721D5688CDACE3F023521CCF0 /* Frameworks */,
-				B6B1A58800392D69A4C1675B6ED223D6 /* Headers */,
-				33C2C9CD42EFF7BF8662681C16831008 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HSDatePickerViewController;
-			productName = HSDatePickerViewController;
-			productReference = 8526CE59558E5F9B0D0188118D037A21 /* HSDatePickerViewController.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
-			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BD36BCA6E9C0DD0CF69C9A88EC867525 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
-				E2F903264A57370F445EE2F39CCAC6C6 /* HSDatePickerViewController */,
-				8981007F052F7F31E7697F0D9300A73B /* Pods-test */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		33C2C9CD42EFF7BF8662681C16831008 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F79D258D63EC3F5B1E8866C6F24FEA68 /* HSDatePickerViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		0D2F30E3714B2C6C1110C01B5E2183A9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9DE08500D23944B922E36E5FA92EC762 /* HSDatePickerViewController-dummy.m in Sources */,
-				99CC2949F6E34732F89D8EAE80ADA387 /* HSDatePickerViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		120C4E824DDCCA024C170A491FF221A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				62143065F94E53F437DCE5D7A998D66D /* AFError.swift in Sources */,
-				8D463A0A4C65C02FDD5211F0F3C6F8B8 /* Alamofire-dummy.m in Sources */,
-				7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */,
-				E2A1C34237B4E928E5F85C097F4C2551 /* DispatchQueue+Alamofire.swift in Sources */,
-				C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */,
-				E59BF19C0AFA68B741552319FC478C7B /* NetworkReachabilityManager.swift in Sources */,
-				0C1B4E9FFB8B81E8833A3BAD537B1990 /* Notifications.swift in Sources */,
-				AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */,
-				12118C354EFA36292F82A8D0CFCE45B2 /* Request.swift in Sources */,
-				86ED08F33B7D357932A9AB743E9D9EA7 /* Response.swift in Sources */,
-				B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */,
-				DF1BBF94997A2F4248B42B25EA919EC2 /* Result.swift in Sources */,
-				C0AEA97E7684DDAD56998C0AE198A433 /* ServerTrustPolicy.swift in Sources */,
-				907AB123FBC8BC9340D5B7350CE828DF /* SessionDelegate.swift in Sources */,
-				A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */,
-				E1F583CB4A68A928CD197250AA752926 /* TaskDelegate.swift in Sources */,
-				3982B850C43B41BA6D25F440F0412E9B /* Timeline.swift in Sources */,
-				FFFDD494EE6D1B83DDAF5F2721F685A6 /* Validation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		998C57B6D2FC09DED0E81F0B7180AC4D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				344C6DD2D234733709818EF43C2A4F49 /* Pods-test-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5ADA1FFDFC16E690084629B6E57027A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 2618ED5B9B25C7FE2F3195733E88849F /* PBXContainerItemProxy */;
-		};
-		859A369521D2F8BF766029622F62131B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HSDatePickerViewController;
-			target = E2F903264A57370F445EE2F39CCAC6C6 /* HSDatePickerViewController */;
-			targetProxy = 889F9977AE9A1746AAFBDA6BAB5B8D46 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		08217EFF5AE225FB3D3816849CCDF66F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77CA746846D6FFD5D202CBEC9C4BE395 /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		42287DDF97330524BA3EF220F0276DA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		74A7C9FD5F14C25B646385D8CEA653AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD629B3B44B3F4FABD276F9DDD61CE38 /* HSDatePickerViewController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/HSDatePickerViewController/HSDatePickerViewController-prefix.pch";
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "Target Support Files/HSDatePickerViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HSDatePickerViewController/HSDatePickerViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = HSDatePickerViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		784D45BD01B6A4A066ED5EC84115205A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77CA746846D6FFD5D202CBEC9C4BE395 /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		88D3C2D04061FCE146BEC192E4CD8C1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD629B3B44B3F4FABD276F9DDD61CE38 /* HSDatePickerViewController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/HSDatePickerViewController/HSDatePickerViewController-prefix.pch";
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "Target Support Files/HSDatePickerViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HSDatePickerViewController/HSDatePickerViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = HSDatePickerViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9DF9EED1D849DFC5667F476A0D0443BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BF768B9C0B25E38B693EF74CCA55BE7 /* Pods-test.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-test/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-test/Pods-test.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_test;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		AE9439C22469D35336242DD983DB5C5F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		E73C6BB92551F71FBE0435C4875E0457 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB0E4F0C6AEE4E28F72CDADA973F2017 /* Pods-test.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-test/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-test/Pods-test.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_test;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		056EF21828684B65A616CE1AAF6F913D /* Build configuration list for PBXNativeTarget "Pods-test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E73C6BB92551F71FBE0435C4875E0457 /* Debug */,
-				9DF9EED1D849DFC5667F476A0D0443BF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		188C9EC846E926C797842F877D89B746 /* Build configuration list for PBXNativeTarget "HSDatePickerViewController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				74A7C9FD5F14C25B646385D8CEA653AB /* Debug */,
-				88D3C2D04061FCE146BEC192E4CD8C1A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE9439C22469D35336242DD983DB5C5F /* Debug */,
-				42287DDF97330524BA3EF220F0276DA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				08217EFF5AE225FB3D3816849CCDF66F /* Debug */,
-				784D45BD01B6A4A066ED5EC84115205A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>03093D54C51CE3D2BBE3F140DF41E4ED</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>19114306FA646F1FF95499BE780D2496</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>06BA5B874316A1987BDD1097E59D082D</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>BB4A54E1260CD67F557DD73DF8C62BFD</string>
+			<key>remoteInfo</key>
+			<string>SVProgressHUD</string>
+		</dict>
+		<key>06F01B24D1606E2A1101D289BB516F56</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_test.framework</string>
+			<key>path</key>
+			<string>Pods-test.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>08217EFF5AE225FB3D3816849CCDF66F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>212BAEB7AEB985CD2677E3A87F4ADA36</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Alamofire/Alamofire-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Alamofire/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Alamofire/Alamofire.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>Alamofire</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>087BEEDED2E9618F40C0050181724855</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Alamofire.swift</string>
+			<key>path</key>
+			<string>Source/Alamofire.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0C1B4E9FFB8B81E8833A3BAD537B1990</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EC8FF3EAB01003F41CC3A2235FB8315D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0C5D29BC991270DAB17ADBAA2BE35DF6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
+			<key>name</key>
+			<string>SVProgressHUD.bundle</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVProgressHUD.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0D2F30E3714B2C6C1110C01B5E2183A9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9DE08500D23944B922E36E5FA92EC762</string>
+				<string>99CC2949F6E34732F89D8EAE80ADA387</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1096B18EB856CF723591ADFB6F5B75FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A786645699A5F10704353A7ECE5FCDA7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11307AB98AD4D03F0ED15BC736B928E3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6B3E508452FDDC47C4739E93CA02F502</string>
+				<string>A786645699A5F10704353A7ECE5FCDA7</string>
+				<string>AA7684ABAF2296C082657569FAFB6DED</string>
+				<string>8A50FD7E2DA1FBA766D3638F9D016E5E</string>
+				<string>7884E3CC22351DA22AB3F00599EF3E1C</string>
+				<string>EBDA8A4D4181B04326FCC4D78D124AEC</string>
+				<string>97D135082A509CD3E07F478E64964335</string>
+				<string>539FFFA4AB505127F14B6F66C5660849</string>
+				<string>7625405B6501AEC51F2E492C17F911C3</string>
+				<string>4DD0AEB69974574912A34E8178D48FC3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SVProgressHUD</string>
+			<key>path</key>
+			<string>SVProgressHUD</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>114FF5383BD152D2882D1F998A2B6EAD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>HSDatePickerViewController.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>120C4E824DDCCA024C170A491FF221A5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>62143065F94E53F437DCE5D7A998D66D</string>
+				<string>8D463A0A4C65C02FDD5211F0F3C6F8B8</string>
+				<string>7CA5A9BA5246FDA8227233E310029392</string>
+				<string>E2A1C34237B4E928E5F85C097F4C2551</string>
+				<string>C7A3408350643ADE1018826C766EE356</string>
+				<string>E59BF19C0AFA68B741552319FC478C7B</string>
+				<string>0C1B4E9FFB8B81E8833A3BAD537B1990</string>
+				<string>AF158CAAF4DD319009AFC855DC995D90</string>
+				<string>12118C354EFA36292F82A8D0CFCE45B2</string>
+				<string>86ED08F33B7D357932A9AB743E9D9EA7</string>
+				<string>B8154C96802336E5DDA5CEE97C3180A0</string>
+				<string>DF1BBF94997A2F4248B42B25EA919EC2</string>
+				<string>C0AEA97E7684DDAD56998C0AE198A433</string>
+				<string>907AB123FBC8BC9340D5B7350CE828DF</string>
+				<string>A79AC30123B0C2177D67F6ED6A1B3215</string>
+				<string>E1F583CB4A68A928CD197250AA752926</string>
+				<string>3982B850C43B41BA6D25F440F0412E9B</string>
+				<string>FFFDD494EE6D1B83DDAF5F2721F685A6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>12118C354EFA36292F82A8D0CFCE45B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F102B4CE6DF3412045518F98352B2A13</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12FC075298EC6DBAB4A6EC7E2B66DC56</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Alamofire-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>188C9EC846E926C797842F877D89B746</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>74A7C9FD5F14C25B646385D8CEA653AB</string>
+				<string>88D3C2D04061FCE146BEC192E4CD8C1A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>19114306FA646F1FF95499BE780D2496</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4C4A5AD1311450E5B84A8EFEB3B77F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>199FB06D5DDE9DEA47A9287480165A18</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-test-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B2919D0FA046704BBE55DBCB5C3AB3A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ParameterEncoding.swift</string>
+			<key>path</key>
+			<string>Source/ParameterEncoding.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C6E058C54D4DF3B446AD49A62B7B590</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Timeline.swift</string>
+			<key>path</key>
+			<string>Source/Timeline.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>212BAEB7AEB985CD2677E3A87F4ADA36</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Alamofire.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>218533352038458054189008AA8E14B8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>TaskDelegate.swift</string>
+			<key>path</key>
+			<string>Source/TaskDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>252CAE1EDB092C4FBD2E4F32189B7ABE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>SVProgressHUD.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2C9EB44F2C2B253A7453EA6013A4BA12</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1096B18EB856CF723591ADFB6F5B75FE</string>
+				<string>2F13F6B248908D955DC3C98C1917704E</string>
+				<string>F2BC4F1C54795CF1E4FF4AA418710145</string>
+				<string>A3393762CCDD5AEA17D0160DD8B4E511</string>
+				<string>2F78C9AA1219B4F7982A80CC5D3A3CC5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2CB04AECAB0FD6FA817E9EA432BD9C79</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D3B3D93D8C59559A31DE682F720D016E</string>
+				<string>988603523A6D5055FD726A728E7A36A5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AE9439C22469D35336242DD983DB5C5F</string>
+				<string>42287DDF97330524BA3EF220F0276DA6</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2E03C227B409F81FD648EA7E8E558E4A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>HSDatePickerViewController.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2F13F6B248908D955DC3C98C1917704E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8A50FD7E2DA1FBA766D3638F9D016E5E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F78C9AA1219B4F7982A80CC5D3A3CC5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>539FFFA4AB505127F14B6F66C5660849</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>31E59304703C9037FC6FEC34A11BD566</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-test-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>33C2C9CD42EFF7BF8662681C16831008</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F79D258D63EC3F5B1E8866C6F24FEA68</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3579B868959DE7AC75FCFE0CCBAA1C64</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>35F062C670461D1C7793D700B2979488</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>636A586E0E4B0F92A247FEDCBFC30A9E</string>
+				<string>087BEEDED2E9618F40C0050181724855</string>
+				<string>E864B764D44E9DF2AC4B100D1EE457C5</string>
+				<string>80F6010E75E43F7C4BC84899986EBD76</string>
+				<string>C8AC56086196B4320305FEF1613124BB</string>
+				<string>EC8FF3EAB01003F41CC3A2235FB8315D</string>
+				<string>1B2919D0FA046704BBE55DBCB5C3AB3A</string>
+				<string>F102B4CE6DF3412045518F98352B2A13</string>
+				<string>3C8516BB9CC400452C45D2C5440D55F6</string>
+				<string>C181EC25305688D23B0F0ED16B5BDB85</string>
+				<string>645C62F84F3CBCB5757BF3862D1460C8</string>
+				<string>B88025162D9AEE0AB2D0C48C6A4D9D3D</string>
+				<string>3DE7B25A5A9E942C70E40B702C9CFA64</string>
+				<string>BBA6AF5689F8D9C53659109C779CAC25</string>
+				<string>218533352038458054189008AA8E14B8</string>
+				<string>1C6E058C54D4DF3B446AD49A62B7B590</string>
+				<string>B36E4A6C079165B552EB9E3D221D1D83</string>
+				<string>46D88456B72E0520934C605818A75AF8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Alamofire</string>
+			<key>path</key>
+			<string>Alamofire</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3739010F712F4F552246B54D7D8999C9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Alamofire-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>37EEFB3F12F958CD30A954F50C99D7AB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>HSDatePickerViewController-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38C424F6A9E47455ACBA0D4654BAB9FB</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>79C040AFDDCE1BCBF6D8B5EB0B85887F</string>
+			<key>remoteInfo</key>
+			<string>Alamofire</string>
+		</dict>
+		<key>3982B850C43B41BA6D25F440F0412E9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C6E058C54D4DF3B446AD49A62B7B590</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3C8516BB9CC400452C45D2C5440D55F6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Response.swift</string>
+			<key>path</key>
+			<string>Source/Response.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CFB42910790CF0BDBCCEBAACD6B9367</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>08217EFF5AE225FB3D3816849CCDF66F</string>
+				<string>784D45BD01B6A4A066ED5EC84115205A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>3D57BD63B02BCFA465CAC39EB21CCC49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D6AF481A8D3C998B2D0C1E4DFD1786CA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>3DB5623EFA2AD7ACE15C1C2452F83E4B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>SVProgressHUD</string>
+			<key>target</key>
+			<string>BB4A54E1260CD67F557DD73DF8C62BFD</string>
+			<key>targetProxy</key>
+			<string>06BA5B874316A1987BDD1097E59D082D</string>
+		</dict>
+		<key>3DE7B25A5A9E942C70E40B702C9CFA64</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SessionDelegate.swift</string>
+			<key>path</key>
+			<string>Source/SessionDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E3779E31F5C27B45A7949C7086DA7B6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90AAE8973B935FD4979EEDFB8B1E12AC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3E947CE3203F1B8E4984BFFA73289385</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Alamofire-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>42287DDF97330524BA3EF220F0276DA6</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_RELEASE=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>433CD3331B6C3787F473C941B61FC68F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>89F803C7E2D77E11F2120CB28FE0B795</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>46D88456B72E0520934C605818A75AF8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F6BFE9213B5F3F611BF8E2A0494764B2</string>
+				<string>212BAEB7AEB985CD2677E3A87F4ADA36</string>
+				<string>3739010F712F4F552246B54D7D8999C9</string>
+				<string>3E947CE3203F1B8E4984BFFA73289385</string>
+				<string>12FC075298EC6DBAB4A6EC7E2B66DC56</string>
+				<string>5F577C7FEE6E46C5FA2B7BED6BFCC518</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Alamofire</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>483DBF15A391E3741AE40139EBA2C8FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4E3389925B914538488EA32FE7ED6B2D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>49B2CB1628B6C4435C2D4946088142BF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90AAE8973B935FD4979EEDFB8B1E12AC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>49FC3FE44191EB8E78C077A6415BFDB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>97D135082A509CD3E07F478E64964335</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4B77631E529BE87C3D05178D780BAD0B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>HSDatePickerViewController.h</string>
+			<key>path</key>
+			<string>HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4C4A5AD1311450E5B84A8EFEB3B77F9A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-test-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DD0AEB69974574912A34E8178D48FC3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FE58BFA70C8FB13B073BD912607ACF5D</string>
+				<string>C090989AA5293FF2629176DEF5D0FD11</string>
+				<string>252CAE1EDB092C4FBD2E4F32189B7ABE</string>
+				<string>B659624D33C32C5A7CFDA06A76CD38D1</string>
+				<string>97FB8DD37DC523C901B1AF6391A04381</string>
+				<string>7BE73C13112F082FD5663C29D5C3043C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/SVProgressHUD</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4E3389925B914538488EA32FE7ED6B2D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>50DA8E553AEB7EA9539F385AD53B7624</string>
+				<string>FCECA60E2F021A3B5588C77BFF4A996A</string>
+				<string>199FB06D5DDE9DEA47A9287480165A18</string>
+				<string>31E59304703C9037FC6FEC34A11BD566</string>
+				<string>4C4A5AD1311450E5B84A8EFEB3B77F9A</string>
+				<string>DF9CD699A394541D05402FC0A5CBA6A1</string>
+				<string>FF553DA09E01987CE47E5F4BA5CBA2A3</string>
+				<string>D6AF481A8D3C998B2D0C1E4DFD1786CA</string>
+				<string>AB0E4F0C6AEE4E28F72CDADA973F2017</string>
+				<string>7BF768B9C0B25E38B693EF74CCA55BE7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-test</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-test</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>50DA8E553AEB7EA9539F385AD53B7624</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>52FE00BD5F63AF843E18039F6C2FB6D4</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>E2F903264A57370F445EE2F39CCAC6C6</string>
+			<key>remoteInfo</key>
+			<string>HSDatePickerViewController</string>
+		</dict>
+		<key>534E4A0C5B4DFB272AB4E0EE7C6EE46B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>HSDatePickerViewController</string>
+			<key>target</key>
+			<string>E2F903264A57370F445EE2F39CCAC6C6</string>
+			<key>targetProxy</key>
+			<string>52FE00BD5F63AF843E18039F6C2FB6D4</string>
+		</dict>
+		<key>539FFFA4AB505127F14B6F66C5660849</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SVRadialGradientLayer.m</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVRadialGradientLayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>56409315A90CABC4F31776AB42CA73B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B699BB2810DB2CFBC635C40B7F1047FF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>57D694799644FAA11D414AD6C809181D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3E3779E31F5C27B45A7949C7086DA7B6</string>
+				<string>6E75D70B7A755E94DEAFA5A4C256D9FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>581270150FE7B654717BA36DF02F3EDB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7BE73C13112F082FD5663C29D5C3043C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>5E2250CA03BD0669EE8A2A3A0C1D9EA3</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>252CAE1EDB092C4FBD2E4F32189B7ABE</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/SVProgressHUD/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/SVProgressHUD/SVProgressHUD.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>SVProgressHUD</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>5F577C7FEE6E46C5FA2B7BED6BFCC518</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5FA4C54721D5688CDACE3F023521CCF0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C9AE760DF834D929A3092DF9C62B83D8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>62143065F94E53F437DCE5D7A998D66D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>636A586E0E4B0F92A247FEDCBFC30A9E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>636A586E0E4B0F92A247FEDCBFC30A9E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>AFError.swift</string>
+			<key>path</key>
+			<string>Source/AFError.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>645C62F84F3CBCB5757BF3862D1460C8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Result.swift</string>
+			<key>path</key>
+			<string>Source/Result.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>64F00CE16AF074AC91A35CE5B8565233</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>35F062C670461D1C7793D700B2979488</string>
+				<string>825C02BD68B451876DA3BB4524C9FB39</string>
+				<string>11307AB98AD4D03F0ED15BC736B928E3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67514714FB452C7D01C56FEF32301D1A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9EB4B7A7CE07C1AE97F1A3E929179411</string>
+				<string>AFE6535CEF054FF058CF041CA9CE29D7</string>
+				<string>06F01B24D1606E2A1101D289BB516F56</string>
+				<string>D715B05DCC5B3F3E5C45546BF004494D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6B3E508452FDDC47C4739E93CA02F502</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SVIndefiniteAnimatedView.h</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVIndefiniteAnimatedView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6E75D70B7A755E94DEAFA5A4C256D9FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EB0B5C34B0704CE42DB8ACE437DB6B71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>74A7C9FD5F14C25B646385D8CEA653AB</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>114FF5383BD152D2882D1F998A2B6EAD</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/HSDatePickerViewController/HSDatePickerViewController-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/HSDatePickerViewController/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/HSDatePickerViewController/HSDatePickerViewController.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>HSDatePickerViewController</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>752F1D4BF435AA8893753815E61E95B6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AA7684ABAF2296C082657569FAFB6DED</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>7625405B6501AEC51F2E492C17F911C3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0C5D29BC991270DAB17ADBAA2BE35DF6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>784D45BD01B6A4A066ED5EC84115205A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>212BAEB7AEB985CD2677E3A87F4ADA36</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Alamofire/Alamofire-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Alamofire/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Alamofire/Alamofire.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>Alamofire</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>7884E3CC22351DA22AB3F00599EF3E1C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SVProgressHUD.h</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVProgressHUD.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>3CFB42910790CF0BDBCCEBAACD6B9367</string>
+			<key>buildPhases</key>
+			<array>
+				<string>120C4E824DDCCA024C170A491FF221A5</string>
+				<string>B1729F851F648EC60EE93CDB3C8BAEAD</string>
+				<string>EFDF3B631BBB965A372347705CA14854</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Alamofire</string>
+			<key>productName</key>
+			<string>Alamofire</string>
+			<key>productReference</key>
+			<string>9EB4B7A7CE07C1AE97F1A3E929179411</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>7AE395A4A444C560A0CC6C8D19E63E26</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>49B2CB1628B6C4435C2D4946088142BF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7BE73C13112F082FD5663C29D5C3043C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SVProgressHUD-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7BF768B9C0B25E38B693EF74CCA55BE7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-test.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7CA5A9BA5246FDA8227233E310029392</key>
+		<dict>
+			<key>fileRef</key>
+			<string>087BEEDED2E9618F40C0050181724855</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
+				<string>433CD3331B6C3787F473C941B61FC68F</string>
+				<string>64F00CE16AF074AC91A35CE5B8565233</string>
+				<string>67514714FB452C7D01C56FEF32301D1A</string>
+				<string>483DBF15A391E3741AE40139EBA2C8FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>80F6010E75E43F7C4BC84899986EBD76</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MultipartFormData.swift</string>
+			<key>path</key>
+			<string>Source/MultipartFormData.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>825C02BD68B451876DA3BB4524C9FB39</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4B77631E529BE87C3D05178D780BAD0B</string>
+				<string>9DA366FC80B2D8BB1B61BD64CE23AAC2</string>
+				<string>56409315A90CABC4F31776AB42CA73B4</string>
+				<string>A1F5434EC6D07EC02AE02EDF99D01797</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>HSDatePickerViewController</string>
+			<key>path</key>
+			<string>HSDatePickerViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>85ABD622EFF524E3494998FE991D0B21</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3D57BD63B02BCFA465CAC39EB21CCC49</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>86ED08F33B7D357932A9AB743E9D9EA7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3C8516BB9CC400452C45D2C5440D55F6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>88D3C2D04061FCE146BEC192E4CD8C1A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>114FF5383BD152D2882D1F998A2B6EAD</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/HSDatePickerViewController/HSDatePickerViewController-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/HSDatePickerViewController/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/HSDatePickerViewController/HSDatePickerViewController.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>HSDatePickerViewController</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>89F803C7E2D77E11F2120CB28FE0B795</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90AAE8973B935FD4979EEDFB8B1E12AC</string>
+				<string>EB0B5C34B0704CE42DB8ACE437DB6B71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8A50FD7E2DA1FBA766D3638F9D016E5E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SVProgressAnimatedView.m</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVProgressAnimatedView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8C9B3840456D54891B0BCA333DD85DC2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>37EEFB3F12F958CD30A954F50C99D7AB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>8D463A0A4C65C02FDD5211F0F3C6F8B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3739010F712F4F552246B54D7D8999C9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8DF27DD0FC6B3EDD425CE4736FC8EDC1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6B3E508452FDDC47C4739E93CA02F502</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>907AB123FBC8BC9340D5B7350CE828DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3DE7B25A5A9E942C70E40B702C9CFA64</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90AAE8973B935FD4979EEDFB8B1E12AC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>91C09AC2A52ED69A27C8D923139A006F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90AAE8973B935FD4979EEDFB8B1E12AC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9278AD36C45B7A57CB35AECB270A727F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7884E3CC22351DA22AB3F00599EF3E1C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>text.script.ruby</string>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>9469DF81ECB494E84675969B5E13374C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12FC075298EC6DBAB4A6EC7E2B66DC56</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>94FD04EAF1457A619F0B3A161F48FCC6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Alamofire</string>
+			<key>target</key>
+			<string>79C040AFDDCE1BCBF6D8B5EB0B85887F</string>
+			<key>targetProxy</key>
+			<string>38C424F6A9E47455ACBA0D4654BAB9FB</string>
+		</dict>
+		<key>97D135082A509CD3E07F478E64964335</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SVRadialGradientLayer.h</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVRadialGradientLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>97FB8DD37DC523C901B1AF6391A04381</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SVProgressHUD-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988603523A6D5055FD726A728E7A36A5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>7BF768B9C0B25E38B693EF74CCA55BE7</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-test/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-test/Pods-test.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_test</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>99CC2949F6E34732F89D8EAE80ADA387</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DA366FC80B2D8BB1B61BD64CE23AAC2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D795E48D717584E6D2AAE770B486523</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>252CAE1EDB092C4FBD2E4F32189B7ABE</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/SVProgressHUD/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/SVProgressHUD/SVProgressHUD.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>SVProgressHUD</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9DA366FC80B2D8BB1B61BD64CE23AAC2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>HSDatePickerViewController.m</string>
+			<key>path</key>
+			<string>HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DE08500D23944B922E36E5FA92EC762</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF23732CF3CD0CCD35DB59628024F449</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9EB4B7A7CE07C1AE97F1A3E929179411</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Alamofire.framework</string>
+			<key>path</key>
+			<string>Alamofire.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A067FC49A66E9B76078D5DDA89839EFA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8DF27DD0FC6B3EDD425CE4736FC8EDC1</string>
+				<string>752F1D4BF435AA8893753815E61E95B6</string>
+				<string>581270150FE7B654717BA36DF02F3EDB</string>
+				<string>9278AD36C45B7A57CB35AECB270A727F</string>
+				<string>49FC3FE44191EB8E78C077A6415BFDB8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A1F5434EC6D07EC02AE02EDF99D01797</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2E03C227B409F81FD648EA7E8E558E4A</string>
+				<string>114FF5383BD152D2882D1F998A2B6EAD</string>
+				<string>EF23732CF3CD0CCD35DB59628024F449</string>
+				<string>EFAF39D82A8F153819D6C52B01AD0D41</string>
+				<string>37EEFB3F12F958CD30A954F50C99D7AB</string>
+				<string>3579B868959DE7AC75FCFE0CCBAA1C64</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/HSDatePickerViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3393762CCDD5AEA17D0160DD8B4E511</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EBDA8A4D4181B04326FCC4D78D124AEC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A49A925194BED538E089677E1761D5A2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A9A082A90773A4A26CC953B2192C4628</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A786645699A5F10704353A7ECE5FCDA7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SVIndefiniteAnimatedView.m</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVIndefiniteAnimatedView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A79AC30123B0C2177D67F6ED6A1B3215</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BBA6AF5689F8D9C53659109C779CAC25</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9A082A90773A4A26CC953B2192C4628</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0C5D29BC991270DAB17ADBAA2BE35DF6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AA7684ABAF2296C082657569FAFB6DED</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SVProgressAnimatedView.h</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVProgressAnimatedView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0E4F0C6AEE4E28F72CDADA973F2017</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-test.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AE9439C22469D35336242DD983DB5C5F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_DEBUG=1</string>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>AF158CAAF4DD319009AFC855DC995D90</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B2919D0FA046704BBE55DBCB5C3AB3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AFE6535CEF054FF058CF041CA9CE29D7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HSDatePickerViewController.framework</string>
+			<key>path</key>
+			<string>HSDatePickerViewController.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B1729F851F648EC60EE93CDB3C8BAEAD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>91C09AC2A52ED69A27C8D923139A006F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B36E4A6C079165B552EB9E3D221D1D83</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Validation.swift</string>
+			<key>path</key>
+			<string>Source/Validation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B659624D33C32C5A7CFDA06A76CD38D1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SVProgressHUD-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B699BB2810DB2CFBC635C40B7F1047FF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>HSDatePickerViewController.xib</string>
+			<key>path</key>
+			<string>HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B6B1A58800392D69A4C1675B6ED223D6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8C9B3840456D54891B0BCA333DD85DC2</string>
+				<string>C629EF77D419EA91AEBC6098CB7D330F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B8154C96802336E5DDA5CEE97C3180A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C181EC25305688D23B0F0ED16B5BDB85</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B88025162D9AEE0AB2D0C48C6A4D9D3D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ServerTrustPolicy.swift</string>
+			<key>path</key>
+			<string>Source/ServerTrustPolicy.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BB4A54E1260CD67F557DD73DF8C62BFD</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DB11D769AC54D009999923776DE8AE25</string>
+			<key>buildPhases</key>
+			<array>
+				<string>2C9EB44F2C2B253A7453EA6013A4BA12</string>
+				<string>57D694799644FAA11D414AD6C809181D</string>
+				<string>A067FC49A66E9B76078D5DDA89839EFA</string>
+				<string>A49A925194BED538E089677E1761D5A2</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SVProgressHUD</string>
+			<key>productName</key>
+			<string>SVProgressHUD</string>
+			<key>productReference</key>
+			<string>D715B05DCC5B3F3E5C45546BF004494D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>BBA6AF5689F8D9C53659109C779CAC25</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SessionManager.swift</string>
+			<key>path</key>
+			<string>Source/SessionManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C090989AA5293FF2629176DEF5D0FD11</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SVProgressHUD.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C0AEA97E7684DDAD56998C0AE198A433</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B88025162D9AEE0AB2D0C48C6A4D9D3D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C181EC25305688D23B0F0ED16B5BDB85</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ResponseSerialization.swift</string>
+			<key>path</key>
+			<string>Source/ResponseSerialization.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C629EF77D419EA91AEBC6098CB7D330F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4B77631E529BE87C3D05178D780BAD0B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C7A3408350643ADE1018826C766EE356</key>
+		<dict>
+			<key>fileRef</key>
+			<string>80F6010E75E43F7C4BC84899986EBD76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C8AC56086196B4320305FEF1613124BB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>NetworkReachabilityManager.swift</string>
+			<key>path</key>
+			<string>Source/NetworkReachabilityManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C9AE760DF834D929A3092DF9C62B83D8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90AAE8973B935FD4979EEDFB8B1E12AC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D3B3D93D8C59559A31DE682F720D016E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>AB0E4F0C6AEE4E28F72CDADA973F2017</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-test/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-test/Pods-test.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_test</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0700</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>67514714FB452C7D01C56FEF32301D1A</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>79C040AFDDCE1BCBF6D8B5EB0B85887F</string>
+				<string>E2F903264A57370F445EE2F39CCAC6C6</string>
+				<string>D753402790DF25CC72639BE0DF3E2BBD</string>
+				<string>BB4A54E1260CD67F557DD73DF8C62BFD</string>
+			</array>
+		</dict>
+		<key>D6AF481A8D3C998B2D0C1E4DFD1786CA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-test-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D715B05DCC5B3F3E5C45546BF004494D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>SVProgressHUD.framework</string>
+			<key>path</key>
+			<string>SVProgressHUD.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D753402790DF25CC72639BE0DF3E2BBD</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2CB04AECAB0FD6FA817E9EA432BD9C79</string>
+			<key>buildPhases</key>
+			<array>
+				<string>03093D54C51CE3D2BBE3F140DF41E4ED</string>
+				<string>7AE395A4A444C560A0CC6C8D19E63E26</string>
+				<string>85ABD622EFF524E3494998FE991D0B21</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>94FD04EAF1457A619F0B3A161F48FCC6</string>
+				<string>534E4A0C5B4DFB272AB4E0EE7C6EE46B</string>
+				<string>3DB5623EFA2AD7ACE15C1C2452F83E4B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-test</string>
+			<key>productName</key>
+			<string>Pods-test</string>
+			<key>productReference</key>
+			<string>06F01B24D1606E2A1101D289BB516F56</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>DB11D769AC54D009999923776DE8AE25</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9D795E48D717584E6D2AAE770B486523</string>
+				<string>5E2250CA03BD0669EE8A2A3A0C1D9EA3</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DF1BBF94997A2F4248B42B25EA919EC2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>645C62F84F3CBCB5757BF3862D1460C8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DF9CD699A394541D05402FC0A5CBA6A1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-test-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E1F583CB4A68A928CD197250AA752926</key>
+		<dict>
+			<key>fileRef</key>
+			<string>218533352038458054189008AA8E14B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E2A1C34237B4E928E5F85C097F4C2551</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E864B764D44E9DF2AC4B100D1EE457C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E2F903264A57370F445EE2F39CCAC6C6</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>188C9EC846E926C797842F877D89B746</string>
+			<key>buildPhases</key>
+			<array>
+				<string>0D2F30E3714B2C6C1110C01B5E2183A9</string>
+				<string>5FA4C54721D5688CDACE3F023521CCF0</string>
+				<string>B6B1A58800392D69A4C1675B6ED223D6</string>
+				<string>33C2C9CD42EFF7BF8662681C16831008</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>HSDatePickerViewController</string>
+			<key>productName</key>
+			<string>HSDatePickerViewController</string>
+			<key>productReference</key>
+			<string>AFE6535CEF054FF058CF041CA9CE29D7</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>E59BF19C0AFA68B741552319FC478C7B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C8AC56086196B4320305FEF1613124BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E864B764D44E9DF2AC4B100D1EE457C5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>DispatchQueue+Alamofire.swift</string>
+			<key>path</key>
+			<string>Source/DispatchQueue+Alamofire.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EB0B5C34B0704CE42DB8ACE437DB6B71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>EBDA8A4D4181B04326FCC4D78D124AEC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SVProgressHUD.m</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVProgressHUD.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EC8FF3EAB01003F41CC3A2235FB8315D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Notifications.swift</string>
+			<key>path</key>
+			<string>Source/Notifications.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF23732CF3CD0CCD35DB59628024F449</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>HSDatePickerViewController-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFAF39D82A8F153819D6C52B01AD0D41</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>HSDatePickerViewController-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFDF3B631BBB965A372347705CA14854</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9469DF81ECB494E84675969B5E13374C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F102B4CE6DF3412045518F98352B2A13</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Request.swift</string>
+			<key>path</key>
+			<string>Source/Request.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F2BC4F1C54795CF1E4FF4AA418710145</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B659624D33C32C5A7CFDA06A76CD38D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F6BFE9213B5F3F611BF8E2A0494764B2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Alamofire.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F79D258D63EC3F5B1E8866C6F24FEA68</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B699BB2810DB2CFBC635C40B7F1047FF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FCECA60E2F021A3B5588C77BFF4A996A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-test.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FE58BFA70C8FB13B073BD912607ACF5D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FF553DA09E01987CE47E5F4BA5CBA2A3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-test-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FFFDD494EE6D1B83DDAF5F2721F685A6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B36E4A6C079165B552EB9E3D221D1D83</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D41D8CD98F00B204E9800998ECF8427E</string>
+</dict>
+</plist>

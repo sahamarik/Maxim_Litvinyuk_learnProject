@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SVProgressHUD
 
 @objc protocol PassingOrganisationFromJSON: class {
     func passOrgFromJSON(newOrg: Organisation) -> ()
@@ -90,4 +91,42 @@ class OrganisationInfoViewController: UIViewController
         self.present(organisationsActionSheet, animated: true, completion: nil)
     }
 }
+    
+    @IBAction func calculate1000thNumber(_ sender: UIButton)
+    {
+        var counter: Int32 = 1
+        var myPrime: Int32 = 0
+        
+        SVProgressHUD.show()
+        DispatchQueue.global().async {
+        
+        for primeNumber in 2...100000
+        {
+            for divisor in 2..<primeNumber
+            {
+                if (primeNumber % divisor) == 0
+                {
+                    break
+                }
+                else if divisor == primeNumber - 1
+                {
+                    myPrime = Int32(primeNumber)
+                    counter = counter + 1
+                }
+            }
+            
+            if counter == 1000
+            {
+                break
+            }
+        }
+            SVProgressHUD.dismiss()
+            
+            let outPutFromCalculation = UIAlertController(title: "1000th prime number", message: String(myPrime), preferredStyle: UIAlertControllerStyle.alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in}
+            outPutFromCalculation.addAction(OKAction)
+            
+            self.present(outPutFromCalculation, animated: true, completion: nil)
+        }// end of dispathcQueue
+    }
 }

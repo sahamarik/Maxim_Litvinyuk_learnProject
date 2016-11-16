@@ -3,6 +3,7 @@ use_frameworks!
 target 'test' do
     pod 'HSDatePickerViewController', '~> 1.0'
     pod 'Alamofire', '~> 4.0'
+    pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
